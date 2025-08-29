@@ -1,0 +1,1075 @@
+# Official Espressif options
+menu.UploadSpeed=Upload Speed
+menu.USBMode=USB Mode
+menu.CDCOnBoot=USB CDC On Boot
+menu.MSCOnBoot=USB Firmware MSC On Boot
+menu.DFUOnBoot=USB DFU On Boot
+menu.UploadMode=Upload Mode
+menu.CPUFreq=CPU Frequency
+menu.FlashFreq=Flash Frequency
+menu.FlashMode=Flash Mode
+menu.FlashSize=Flash Size
+menu.PartitionScheme=Partition Scheme
+menu.DebugLevel=Core Debug Level
+menu.PSRAM=PSRAM
+menu.LoopCore=Arduino Runs On
+menu.EventsCore=Events Run On
+menu.MemoryType=Memory Type
+menu.EraseFlash=Erase All Flash Before Sketch Upload
+menu.JTAGAdapter=JTAG Adapter
+menu.ZigbeeMode=Zigbee Mode
+menu.PinNumbers=Pin Numbering
+
+# Custom options
+menu.Revision=Board Revision
+menu.LORAWAN_REGION=LoRaWan Region
+menu.LoRaWanDebugLevel=LoRaWan Debug Level
+menu.LORAWAN_DEVEUI=LoRaWan DevEUI
+menu.LORAWAN_PREAMBLE_LENGTH=LoRaWan Preamble Length
+menu.einksize=E-Ink Display Size
+
+##############################################################
+
+Inkplate2.name=Soldered Inkplate2
+
+Inkplate2.bootloader.tool=esptool_py
+Inkplate2.bootloader.tool.default=esptool_py
+
+Inkplate2.upload.tool=esptool_py
+Inkplate2.upload.tool.default=esptool_py
+Inkplate2.upload.tool.network=esp_ota
+
+Inkplate2.upload.maximum_size=1310720
+Inkplate2.upload.maximum_data_size=327680
+Inkplate2.upload.flags=
+Inkplate2.upload.extra_flags=
+
+Inkplate2.serial.disableDTR=true
+Inkplate2.serial.disableRTS=true
+
+Inkplate2.build.tarch=xtensa
+Inkplate2.build.bootloader_addr=0x1000
+Inkplate2.build.target=esp32
+Inkplate2.build.mcu=esp32
+Inkplate2.build.core=esp32
+Inkplate2.build.variant=Inkplate
+Inkplate2.build.board=INKPLATE2
+
+Inkplate2.build.f_cpu=240000000L
+Inkplate2.build.flash_size=4MB
+Inkplate2.build.flash_freq=80m
+Inkplate2.build.flash_mode=qio
+Inkplate2.build.boot=dio
+Inkplate2.build.partitions=default
+Inkplate2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate2.build.extra_libs=
+
+Inkplate2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate2.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate2.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate2.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate2.menu.PartitionScheme.default.build.partitions=default
+Inkplate2.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate2.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate2.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate2.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate2.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate2.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate2.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate2.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate2.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate2.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate2.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate2.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate2.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate2.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate2.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate2.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate2.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate2.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate2.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate2.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate2.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate2.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate2.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate2.menu.FlashMode.qio=QIO
+Inkplate2.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate2.menu.FlashMode.qio.build.boot=qio
+Inkplate2.menu.FlashMode.dio=DIO
+Inkplate2.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate2.menu.FlashMode.dio.build.boot=dio
+Inkplate2.menu.FlashMode.qout=QOUT
+Inkplate2.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate2.menu.FlashMode.qout.build.boot=qout
+Inkplate2.menu.FlashMode.dout=DOUT
+Inkplate2.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate2.menu.FlashMode.dout.build.boot=dout
+
+Inkplate2.menu.FlashFreq.80=80MHz
+Inkplate2.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate2.menu.FlashFreq.40=40MHz
+Inkplate2.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate2.menu.UploadSpeed.921600=921600
+Inkplate2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate2.menu.UploadSpeed.115200=115200
+Inkplate2.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate2.menu.UploadSpeed.256000.windows=256000
+Inkplate2.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate2.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate2.menu.UploadSpeed.230400=230400
+Inkplate2.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate2.menu.UploadSpeed.460800.linux=460800
+Inkplate2.menu.UploadSpeed.460800.macosx=460800
+Inkplate2.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate2.menu.UploadSpeed.512000.windows=512000
+Inkplate2.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate2.menu.DebugLevel.none=None
+Inkplate2.menu.DebugLevel.none.build.code_debug=0
+Inkplate2.menu.DebugLevel.error=Error
+Inkplate2.menu.DebugLevel.error.build.code_debug=1
+Inkplate2.menu.DebugLevel.warn=Warn
+Inkplate2.menu.DebugLevel.warn.build.code_debug=2
+Inkplate2.menu.DebugLevel.info=Info
+Inkplate2.menu.DebugLevel.info.build.code_debug=3
+Inkplate2.menu.DebugLevel.debug=Debug
+Inkplate2.menu.DebugLevel.debug.build.code_debug=4
+Inkplate2.menu.DebugLevel.verbose=Verbose
+Inkplate2.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate2.menu.EraseFlash.none=Disabled
+Inkplate2.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate2.menu.EraseFlash.all=Enabled
+Inkplate2.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate4TEMPERA.name=Soldered Inkplate 4 TEMPERA
+
+Inkplate4TEMPERA.bootloader.tool=esptool_py
+Inkplate4TEMPERA.bootloader.tool.default=esptool_py
+
+Inkplate4TEMPERA.upload.tool=esptool_py
+Inkplate4TEMPERA.upload.tool.default=esptool_py
+Inkplate4TEMPERA.upload.tool.network=esp_ota
+
+Inkplate4TEMPERA.upload.maximum_size=1310720
+Inkplate4TEMPERA.upload.maximum_data_size=327680
+Inkplate4TEMPERA.upload.flags=
+Inkplate4TEMPERA.upload.extra_flags=
+
+Inkplate4TEMPERA.serial.disableDTR=true
+Inkplate4TEMPERA.serial.disableRTS=true
+
+Inkplate4TEMPERA.build.tarch=xtensa
+Inkplate4TEMPERA.build.bootloader_addr=0x1000
+Inkplate4TEMPERA.build.target=esp32
+Inkplate4TEMPERA.build.mcu=esp32
+Inkplate4TEMPERA.build.core=esp32
+Inkplate4TEMPERA.build.variant=Inkplate
+Inkplate4TEMPERA.build.board=INKPLATE4TEMPERA
+
+Inkplate4TEMPERA.build.f_cpu=240000000L
+Inkplate4TEMPERA.build.flash_size=4MB
+Inkplate4TEMPERA.build.flash_freq=80m
+Inkplate4TEMPERA.build.flash_mode=qio
+Inkplate4TEMPERA.build.boot=dio
+Inkplate4TEMPERA.build.partitions=default
+Inkplate4TEMPERA.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate4TEMPERA.build.extra_libs=
+
+Inkplate4TEMPERA.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate4TEMPERA.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate4TEMPERA.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate4TEMPERA.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate4TEMPERA.menu.PartitionScheme.default.build.partitions=default
+Inkplate4TEMPERA.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate4TEMPERA.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate4TEMPERA.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate4TEMPERA.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate4TEMPERA.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate4TEMPERA.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate4TEMPERA.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate4TEMPERA.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate4TEMPERA.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate4TEMPERA.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate4TEMPERA.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate4TEMPERA.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate4TEMPERA.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate4TEMPERA.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate4TEMPERA.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate4TEMPERA.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate4TEMPERA.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate4TEMPERA.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate4TEMPERA.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate4TEMPERA.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate4TEMPERA.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate4TEMPERA.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate4TEMPERA.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate4TEMPERA.menu.FlashMode.qio=QIO
+Inkplate4TEMPERA.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate4TEMPERA.menu.FlashMode.qio.build.boot=qio
+Inkplate4TEMPERA.menu.FlashMode.dio=DIO
+Inkplate4TEMPERA.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate4TEMPERA.menu.FlashMode.dio.build.boot=dio
+Inkplate4TEMPERA.menu.FlashMode.qout=QOUT
+Inkplate4TEMPERA.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate4TEMPERA.menu.FlashMode.qout.build.boot=qout
+Inkplate4TEMPERA.menu.FlashMode.dout=DOUT
+Inkplate4TEMPERA.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate4TEMPERA.menu.FlashMode.dout.build.boot=dout
+
+Inkplate4TEMPERA.menu.FlashFreq.80=80MHz
+Inkplate4TEMPERA.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate4TEMPERA.menu.FlashFreq.40=40MHz
+Inkplate4TEMPERA.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate4TEMPERA.menu.UploadSpeed.921600=921600
+Inkplate4TEMPERA.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate4TEMPERA.menu.UploadSpeed.115200=115200
+Inkplate4TEMPERA.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate4TEMPERA.menu.UploadSpeed.256000.windows=256000
+Inkplate4TEMPERA.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate4TEMPERA.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate4TEMPERA.menu.UploadSpeed.230400=230400
+Inkplate4TEMPERA.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate4TEMPERA.menu.UploadSpeed.460800.linux=460800
+Inkplate4TEMPERA.menu.UploadSpeed.460800.macosx=460800
+Inkplate4TEMPERA.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate4TEMPERA.menu.UploadSpeed.512000.windows=512000
+Inkplate4TEMPERA.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate4TEMPERA.menu.DebugLevel.none=None
+Inkplate4TEMPERA.menu.DebugLevel.none.build.code_debug=0
+Inkplate4TEMPERA.menu.DebugLevel.error=Error
+Inkplate4TEMPERA.menu.DebugLevel.error.build.code_debug=1
+Inkplate4TEMPERA.menu.DebugLevel.warn=Warn
+Inkplate4TEMPERA.menu.DebugLevel.warn.build.code_debug=2
+Inkplate4TEMPERA.menu.DebugLevel.info=Info
+Inkplate4TEMPERA.menu.DebugLevel.info.build.code_debug=3
+Inkplate4TEMPERA.menu.DebugLevel.debug=Debug
+Inkplate4TEMPERA.menu.DebugLevel.debug.build.code_debug=4
+Inkplate4TEMPERA.menu.DebugLevel.verbose=Verbose
+Inkplate4TEMPERA.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate4TEMPERA.menu.EraseFlash.none=Disabled
+Inkplate4TEMPERA.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate4TEMPERA.menu.EraseFlash.all=Enabled
+Inkplate4TEMPERA.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate5.name=Soldered Inkplate5
+
+Inkplate5.bootloader.tool=esptool_py
+Inkplate5.bootloader.tool.default=esptool_py
+
+Inkplate5.upload.tool=esptool_py
+Inkplate5.upload.tool.default=esptool_py
+Inkplate5.upload.tool.network=esp_ota
+
+Inkplate5.upload.maximum_size=1310720
+Inkplate5.upload.maximum_data_size=327680
+Inkplate5.upload.flags=
+Inkplate5.upload.extra_flags=
+
+Inkplate5.serial.disableDTR=true
+Inkplate5.serial.disableRTS=true
+
+Inkplate5.build.tarch=xtensa
+Inkplate5.build.bootloader_addr=0x1000
+Inkplate5.build.target=esp32
+Inkplate5.build.mcu=esp32
+Inkplate5.build.core=esp32
+Inkplate5.build.variant=Inkplate
+Inkplate5.build.board=INKPLATE5
+
+Inkplate5.build.f_cpu=240000000L
+Inkplate5.build.flash_size=4MB
+Inkplate5.build.flash_freq=80m
+Inkplate5.build.flash_mode=qio
+Inkplate5.build.boot=dio
+Inkplate5.build.partitions=default
+Inkplate5.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate5.build.extra_libs=
+
+Inkplate5.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate5.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate5.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate5.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate5.menu.PartitionScheme.default.build.partitions=default
+Inkplate5.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate5.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate5.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate5.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate5.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate5.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate5.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate5.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate5.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate5.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate5.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate5.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate5.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate5.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate5.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate5.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate5.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate5.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate5.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate5.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate5.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate5.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate5.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate5.menu.FlashMode.qio=QIO
+Inkplate5.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate5.menu.FlashMode.qio.build.boot=qio
+Inkplate5.menu.FlashMode.dio=DIO
+Inkplate5.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate5.menu.FlashMode.dio.build.boot=dio
+Inkplate5.menu.FlashMode.qout=QOUT
+Inkplate5.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate5.menu.FlashMode.qout.build.boot=qout
+Inkplate5.menu.FlashMode.dout=DOUT
+Inkplate5.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate5.menu.FlashMode.dout.build.boot=dout
+
+Inkplate5.menu.FlashFreq.80=80MHz
+Inkplate5.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate5.menu.FlashFreq.40=40MHz
+Inkplate5.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate5.menu.UploadSpeed.921600=921600
+Inkplate5.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate5.menu.UploadSpeed.115200=115200
+Inkplate5.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate5.menu.UploadSpeed.256000.windows=256000
+Inkplate5.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate5.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate5.menu.UploadSpeed.230400=230400
+Inkplate5.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate5.menu.UploadSpeed.460800.linux=460800
+Inkplate5.menu.UploadSpeed.460800.macosx=460800
+Inkplate5.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate5.menu.UploadSpeed.512000.windows=512000
+Inkplate5.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate5.menu.DebugLevel.none=None
+Inkplate5.menu.DebugLevel.none.build.code_debug=0
+Inkplate5.menu.DebugLevel.error=Error
+Inkplate5.menu.DebugLevel.error.build.code_debug=1
+Inkplate5.menu.DebugLevel.warn=Warn
+Inkplate5.menu.DebugLevel.warn.build.code_debug=2
+Inkplate5.menu.DebugLevel.info=Info
+Inkplate5.menu.DebugLevel.info.build.code_debug=3
+Inkplate5.menu.DebugLevel.debug=Debug
+Inkplate5.menu.DebugLevel.debug.build.code_debug=4
+Inkplate5.menu.DebugLevel.verbose=Verbose
+Inkplate5.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate5.menu.EraseFlash.none=Disabled
+Inkplate5.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate5.menu.EraseFlash.all=Enabled
+Inkplate5.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate5V2.name=Soldered Inkplate 5 V2
+
+Inkplate5V2.bootloader.tool=esptool_py
+Inkplate5V2.bootloader.tool.default=esptool_py
+
+Inkplate5V2.upload.tool=esptool_py
+Inkplate5V2.upload.tool.default=esptool_py
+Inkplate5V2.upload.tool.network=esp_ota
+
+Inkplate5V2.upload.maximum_size=1310720
+Inkplate5V2.upload.maximum_data_size=327680
+Inkplate5V2.upload.flags=
+Inkplate5V2.upload.extra_flags=
+
+Inkplate5V2.serial.disableDTR=true
+Inkplate5V2.serial.disableRTS=true
+
+Inkplate5V2.build.tarch=xtensa
+Inkplate5V2.build.bootloader_addr=0x1000
+Inkplate5V2.build.target=esp32
+Inkplate5V2.build.mcu=esp32
+Inkplate5V2.build.core=esp32
+Inkplate5V2.build.variant=Inkplate
+Inkplate5V2.build.board=INKPLATE5V2
+
+Inkplate5V2.build.f_cpu=240000000L
+Inkplate5V2.build.flash_size=4MB
+Inkplate5V2.build.flash_freq=80m
+Inkplate5V2.build.flash_mode=qio
+Inkplate5V2.build.boot=dio
+Inkplate5V2.build.partitions=default
+Inkplate5V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate5V2.build.extra_libs=
+
+Inkplate5V2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate5V2.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate5V2.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate5V2.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate5V2.menu.PartitionScheme.default.build.partitions=default
+Inkplate5V2.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate5V2.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate5V2.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate5V2.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate5V2.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate5V2.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate5V2.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate5V2.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate5V2.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate5V2.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate5V2.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate5V2.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate5V2.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate5V2.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate5V2.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate5V2.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate5V2.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate5V2.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate5V2.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate5V2.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate5V2.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate5V2.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate5V2.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate5V2.menu.FlashMode.qio=QIO
+Inkplate5V2.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate5V2.menu.FlashMode.qio.build.boot=qio
+Inkplate5V2.menu.FlashMode.dio=DIO
+Inkplate5V2.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate5V2.menu.FlashMode.dio.build.boot=dio
+Inkplate5V2.menu.FlashMode.qout=QOUT
+Inkplate5V2.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate5V2.menu.FlashMode.qout.build.boot=qout
+Inkplate5V2.menu.FlashMode.dout=DOUT
+Inkplate5V2.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate5V2.menu.FlashMode.dout.build.boot=dout
+
+Inkplate5V2.menu.FlashFreq.80=80MHz
+Inkplate5V2.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate5V2.menu.FlashFreq.40=40MHz
+Inkplate5V2.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate5V2.menu.UploadSpeed.921600=921600
+Inkplate5V2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate5V2.menu.UploadSpeed.115200=115200
+Inkplate5V2.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate5V2.menu.UploadSpeed.256000.windows=256000
+Inkplate5V2.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate5V2.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate5V2.menu.UploadSpeed.230400=230400
+Inkplate5V2.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate5V2.menu.UploadSpeed.460800.linux=460800
+Inkplate5V2.menu.UploadSpeed.460800.macosx=460800
+Inkplate5V2.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate5V2.menu.UploadSpeed.512000.windows=512000
+Inkplate5V2.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate5V2.menu.DebugLevel.none=None
+Inkplate5V2.menu.DebugLevel.none.build.code_debug=0
+Inkplate5V2.menu.DebugLevel.error=Error
+Inkplate5V2.menu.DebugLevel.error.build.code_debug=1
+Inkplate5V2.menu.DebugLevel.warn=Warn
+Inkplate5V2.menu.DebugLevel.warn.build.code_debug=2
+Inkplate5V2.menu.DebugLevel.info=Info
+Inkplate5V2.menu.DebugLevel.info.build.code_debug=3
+Inkplate5V2.menu.DebugLevel.debug=Debug
+Inkplate5V2.menu.DebugLevel.debug.build.code_debug=4
+Inkplate5V2.menu.DebugLevel.verbose=Verbose
+Inkplate5V2.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate5V2.menu.EraseFlash.none=Disabled
+Inkplate5V2.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate5V2.menu.EraseFlash.all=Enabled
+Inkplate5V2.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate6V2.name=Soldered Inkplate6
+
+Inkplate6V2.bootloader.tool=esptool_py
+Inkplate6V2.bootloader.tool.default=esptool_py
+
+Inkplate6V2.upload.tool=esptool_py
+Inkplate6V2.upload.tool.default=esptool_py
+Inkplate6V2.upload.tool.network=esp_ota
+
+Inkplate6V2.upload.maximum_size=1310720
+Inkplate6V2.upload.maximum_data_size=327680
+Inkplate6V2.upload.flags=
+Inkplate6V2.upload.extra_flags=
+
+Inkplate6V2.serial.disableDTR=true
+Inkplate6V2.serial.disableRTS=true
+
+Inkplate6V2.build.tarch=xtensa
+Inkplate6V2.build.bootloader_addr=0x1000
+Inkplate6V2.build.target=esp32
+Inkplate6V2.build.mcu=esp32
+Inkplate6V2.build.core=esp32
+Inkplate6V2.build.variant=Inkplate
+Inkplate6V2.build.board=INKPLATE6V2
+
+Inkplate6V2.build.f_cpu=240000000L
+Inkplate6V2.build.flash_size=4MB
+Inkplate6V2.build.flash_freq=80m
+Inkplate6V2.build.flash_mode=qio
+Inkplate6V2.build.boot=dio
+Inkplate6V2.build.partitions=default
+Inkplate6V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6V2.build.extra_libs=
+
+Inkplate6V2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate6V2.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate6V2.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate6V2.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate6V2.menu.PartitionScheme.default.build.partitions=default
+Inkplate6V2.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate6V2.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate6V2.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate6V2.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate6V2.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate6V2.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate6V2.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate6V2.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate6V2.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate6V2.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate6V2.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate6V2.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate6V2.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate6V2.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate6V2.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate6V2.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate6V2.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate6V2.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate6V2.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate6V2.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate6V2.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate6V2.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate6V2.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate6V2.menu.FlashMode.qio=QIO
+Inkplate6V2.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate6V2.menu.FlashMode.qio.build.boot=qio
+Inkplate6V2.menu.FlashMode.dio=DIO
+Inkplate6V2.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate6V2.menu.FlashMode.dio.build.boot=dio
+Inkplate6V2.menu.FlashMode.qout=QOUT
+Inkplate6V2.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate6V2.menu.FlashMode.qout.build.boot=qout
+Inkplate6V2.menu.FlashMode.dout=DOUT
+Inkplate6V2.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate6V2.menu.FlashMode.dout.build.boot=dout
+
+Inkplate6V2.menu.FlashFreq.80=80MHz
+Inkplate6V2.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate6V2.menu.FlashFreq.40=40MHz
+Inkplate6V2.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate6V2.menu.UploadSpeed.921600=921600
+Inkplate6V2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6V2.menu.UploadSpeed.115200=115200
+Inkplate6V2.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate6V2.menu.UploadSpeed.256000.windows=256000
+Inkplate6V2.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate6V2.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate6V2.menu.UploadSpeed.230400=230400
+Inkplate6V2.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate6V2.menu.UploadSpeed.460800.linux=460800
+Inkplate6V2.menu.UploadSpeed.460800.macosx=460800
+Inkplate6V2.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate6V2.menu.UploadSpeed.512000.windows=512000
+Inkplate6V2.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate6V2.menu.DebugLevel.none=None
+Inkplate6V2.menu.DebugLevel.none.build.code_debug=0
+Inkplate6V2.menu.DebugLevel.error=Error
+Inkplate6V2.menu.DebugLevel.error.build.code_debug=1
+Inkplate6V2.menu.DebugLevel.warn=Warn
+Inkplate6V2.menu.DebugLevel.warn.build.code_debug=2
+Inkplate6V2.menu.DebugLevel.info=Info
+Inkplate6V2.menu.DebugLevel.info.build.code_debug=3
+Inkplate6V2.menu.DebugLevel.debug=Debug
+Inkplate6V2.menu.DebugLevel.debug.build.code_debug=4
+Inkplate6V2.menu.DebugLevel.verbose=Verbose
+Inkplate6V2.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate6V2.menu.EraseFlash.none=Disabled
+Inkplate6V2.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate6V2.menu.EraseFlash.all=Enabled
+Inkplate6V2.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate6plusV2.name=Soldered Inkplate 6Plus
+
+Inkplate6plusV2.bootloader.tool=esptool_py
+Inkplate6plusV2.bootloader.tool.default=esptool_py
+
+Inkplate6plusV2.upload.tool=esptool_py
+Inkplate6plusV2.upload.tool.default=esptool_py
+Inkplate6plusV2.upload.tool.network=esp_ota
+
+Inkplate6plusV2.upload.maximum_size=1310720
+Inkplate6plusV2.upload.maximum_data_size=327680
+Inkplate6plusV2.upload.flags=
+Inkplate6plusV2.upload.extra_flags=
+
+Inkplate6plusV2.serial.disableDTR=true
+Inkplate6plusV2.serial.disableRTS=true
+
+Inkplate6plusV2.build.tarch=xtensa
+Inkplate6plusV2.build.bootloader_addr=0x1000
+Inkplate6plusV2.build.target=esp32
+Inkplate6plusV2.build.mcu=esp32
+Inkplate6plusV2.build.core=esp32
+Inkplate6plusV2.build.variant=Inkplate
+Inkplate6plusV2.build.board=INKPLATE6PLUSV2
+
+Inkplate6plusV2.build.f_cpu=240000000L
+Inkplate6plusV2.build.flash_size=4MB
+Inkplate6plusV2.build.flash_freq=80m
+Inkplate6plusV2.build.flash_mode=qio
+Inkplate6plusV2.build.boot=dio
+Inkplate6plusV2.build.partitions=default
+Inkplate6plusV2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6plusV2.build.extra_libs=
+
+Inkplate6plusV2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate6plusV2.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate6plusV2.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate6plusV2.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate6plusV2.menu.PartitionScheme.default.build.partitions=default
+Inkplate6plusV2.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate6plusV2.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate6plusV2.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate6plusV2.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate6plusV2.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate6plusV2.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate6plusV2.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate6plusV2.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate6plusV2.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate6plusV2.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate6plusV2.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate6plusV2.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate6plusV2.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate6plusV2.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate6plusV2.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate6plusV2.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate6plusV2.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate6plusV2.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate6plusV2.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate6plusV2.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate6plusV2.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate6plusV2.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate6plusV2.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate6plusV2.menu.FlashMode.qio=QIO
+Inkplate6plusV2.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate6plusV2.menu.FlashMode.qio.build.boot=qio
+Inkplate6plusV2.menu.FlashMode.dio=DIO
+Inkplate6plusV2.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate6plusV2.menu.FlashMode.dio.build.boot=dio
+Inkplate6plusV2.menu.FlashMode.qout=QOUT
+Inkplate6plusV2.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate6plusV2.menu.FlashMode.qout.build.boot=qout
+Inkplate6plusV2.menu.FlashMode.dout=DOUT
+Inkplate6plusV2.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate6plusV2.menu.FlashMode.dout.build.boot=dout
+
+Inkplate6plusV2.menu.FlashFreq.80=80MHz
+Inkplate6plusV2.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate6plusV2.menu.FlashFreq.40=40MHz
+Inkplate6plusV2.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate6plusV2.menu.UploadSpeed.921600=921600
+Inkplate6plusV2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6plusV2.menu.UploadSpeed.115200=115200
+Inkplate6plusV2.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate6plusV2.menu.UploadSpeed.256000.windows=256000
+Inkplate6plusV2.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate6plusV2.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate6plusV2.menu.UploadSpeed.230400=230400
+Inkplate6plusV2.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate6plusV2.menu.UploadSpeed.460800.linux=460800
+Inkplate6plusV2.menu.UploadSpeed.460800.macosx=460800
+Inkplate6plusV2.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate6plusV2.menu.UploadSpeed.512000.windows=512000
+Inkplate6plusV2.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate6plusV2.menu.DebugLevel.none=None
+Inkplate6plusV2.menu.DebugLevel.none.build.code_debug=0
+Inkplate6plusV2.menu.DebugLevel.error=Error
+Inkplate6plusV2.menu.DebugLevel.error.build.code_debug=1
+Inkplate6plusV2.menu.DebugLevel.warn=Warn
+Inkplate6plusV2.menu.DebugLevel.warn.build.code_debug=2
+Inkplate6plusV2.menu.DebugLevel.info=Info
+Inkplate6plusV2.menu.DebugLevel.info.build.code_debug=3
+Inkplate6plusV2.menu.DebugLevel.debug=Debug
+Inkplate6plusV2.menu.DebugLevel.debug.build.code_debug=4
+Inkplate6plusV2.menu.DebugLevel.verbose=Verbose
+Inkplate6plusV2.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate6plusV2.menu.EraseFlash.none=Disabled
+Inkplate6plusV2.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate6plusV2.menu.EraseFlash.all=Enabled
+Inkplate6plusV2.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate6Flick.name=Soldered Inkplate 6 FLICK
+
+Inkplate6Flick.bootloader.tool=esptool_py
+Inkplate6Flick.bootloader.tool.default=esptool_py
+
+Inkplate6Flick.upload.tool=esptool_py
+Inkplate6Flick.upload.tool.default=esptool_py
+Inkplate6Flick.upload.tool.network=esp_ota
+
+Inkplate6Flick.upload.maximum_size=1310720
+Inkplate6Flick.upload.maximum_data_size=327680
+Inkplate6Flick.upload.flags=
+Inkplate6Flick.upload.extra_flags=
+
+Inkplate6Flick.serial.disableDTR=true
+Inkplate6Flick.serial.disableRTS=true
+
+Inkplate6Flick.build.tarch=xtensa
+Inkplate6Flick.build.bootloader_addr=0x1000
+Inkplate6Flick.build.target=esp32
+Inkplate6Flick.build.mcu=esp32
+Inkplate6Flick.build.core=esp32
+Inkplate6Flick.build.variant=Inkplate
+Inkplate6Flick.build.board=INKPLATE6FLICK
+
+Inkplate6Flick.build.f_cpu=240000000L
+Inkplate6Flick.build.flash_size=4MB
+Inkplate6Flick.build.flash_freq=80m
+Inkplate6Flick.build.flash_mode=qio
+Inkplate6Flick.build.boot=dio
+Inkplate6Flick.build.partitions=default
+Inkplate6Flick.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6Flick.build.extra_libs=
+
+Inkplate6Flick.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate6Flick.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate6Flick.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate6Flick.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate6Flick.menu.PartitionScheme.default.build.partitions=default
+Inkplate6Flick.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate6Flick.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate6Flick.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate6Flick.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate6Flick.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate6Flick.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate6Flick.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate6Flick.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate6Flick.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate6Flick.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate6Flick.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate6Flick.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate6Flick.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate6Flick.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate6Flick.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate6Flick.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate6Flick.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate6Flick.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate6Flick.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate6Flick.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate6Flick.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate6Flick.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate6Flick.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate6Flick.menu.FlashMode.qio=QIO
+Inkplate6Flick.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate6Flick.menu.FlashMode.qio.build.boot=qio
+Inkplate6Flick.menu.FlashMode.dio=DIO
+Inkplate6Flick.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate6Flick.menu.FlashMode.dio.build.boot=dio
+Inkplate6Flick.menu.FlashMode.qout=QOUT
+Inkplate6Flick.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate6Flick.menu.FlashMode.qout.build.boot=qout
+Inkplate6Flick.menu.FlashMode.dout=DOUT
+Inkplate6Flick.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate6Flick.menu.FlashMode.dout.build.boot=dout
+
+Inkplate6Flick.menu.FlashFreq.80=80MHz
+Inkplate6Flick.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate6Flick.menu.FlashFreq.40=40MHz
+Inkplate6Flick.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate6Flick.menu.UploadSpeed.921600=921600
+Inkplate6Flick.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6Flick.menu.UploadSpeed.115200=115200
+Inkplate6Flick.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate6Flick.menu.UploadSpeed.256000.windows=256000
+Inkplate6Flick.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate6Flick.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate6Flick.menu.UploadSpeed.230400=230400
+Inkplate6Flick.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate6Flick.menu.UploadSpeed.460800.linux=460800
+Inkplate6Flick.menu.UploadSpeed.460800.macosx=460800
+Inkplate6Flick.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate6Flick.menu.UploadSpeed.512000.windows=512000
+Inkplate6Flick.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate6Flick.menu.DebugLevel.none=None
+Inkplate6Flick.menu.DebugLevel.none.build.code_debug=0
+Inkplate6Flick.menu.DebugLevel.error=Error
+Inkplate6Flick.menu.DebugLevel.error.build.code_debug=1
+Inkplate6Flick.menu.DebugLevel.warn=Warn
+Inkplate6Flick.menu.DebugLevel.warn.build.code_debug=2
+Inkplate6Flick.menu.DebugLevel.info=Info
+Inkplate6Flick.menu.DebugLevel.info.build.code_debug=3
+Inkplate6Flick.menu.DebugLevel.debug=Debug
+Inkplate6Flick.menu.DebugLevel.debug.build.code_debug=4
+Inkplate6Flick.menu.DebugLevel.verbose=Verbose
+Inkplate6Flick.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate6Flick.menu.EraseFlash.none=Disabled
+Inkplate6Flick.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate6Flick.menu.EraseFlash.all=Enabled
+Inkplate6Flick.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate6COLOR.name=Soldered Inkplate 6COLOR
+
+Inkplate6COLOR.bootloader.tool=esptool_py
+Inkplate6COLOR.bootloader.tool.default=esptool_py
+
+Inkplate6COLOR.upload.tool=esptool_py
+Inkplate6COLOR.upload.tool.default=esptool_py
+Inkplate6COLOR.upload.tool.network=esp_ota
+
+Inkplate6COLOR.upload.maximum_size=1310720
+Inkplate6COLOR.upload.maximum_data_size=327680
+Inkplate6COLOR.upload.flags=
+Inkplate6COLOR.upload.extra_flags=
+
+Inkplate6COLOR.serial.disableDTR=true
+Inkplate6COLOR.serial.disableRTS=true
+
+Inkplate6COLOR.build.tarch=xtensa
+Inkplate6COLOR.build.bootloader_addr=0x1000
+Inkplate6COLOR.build.target=esp32
+Inkplate6COLOR.build.mcu=esp32
+Inkplate6COLOR.build.core=esp32
+Inkplate6COLOR.build.variant=Inkplate
+Inkplate6COLOR.build.board=INKPLATECOLOR
+
+Inkplate6COLOR.build.f_cpu=240000000L
+Inkplate6COLOR.build.flash_size=4MB
+Inkplate6COLOR.build.flash_freq=80m
+Inkplate6COLOR.build.flash_mode=qio
+Inkplate6COLOR.build.boot=dio
+Inkplate6COLOR.build.partitions=default
+Inkplate6COLOR.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6COLOR.build.extra_libs=
+
+Inkplate6COLOR.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate6COLOR.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate6COLOR.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate6COLOR.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate6COLOR.menu.PartitionScheme.default.build.partitions=default
+Inkplate6COLOR.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate6COLOR.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate6COLOR.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate6COLOR.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate6COLOR.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate6COLOR.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate6COLOR.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate6COLOR.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate6COLOR.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate6COLOR.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate6COLOR.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate6COLOR.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate6COLOR.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate6COLOR.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate6COLOR.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate6COLOR.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate6COLOR.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate6COLOR.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate6COLOR.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate6COLOR.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate6COLOR.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate6COLOR.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate6COLOR.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate6COLOR.menu.FlashMode.qio=QIO
+Inkplate6COLOR.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate6COLOR.menu.FlashMode.qio.build.boot=qio
+Inkplate6COLOR.menu.FlashMode.dio=DIO
+Inkplate6COLOR.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate6COLOR.menu.FlashMode.dio.build.boot=dio
+Inkplate6COLOR.menu.FlashMode.qout=QOUT
+Inkplate6COLOR.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate6COLOR.menu.FlashMode.qout.build.boot=qout
+Inkplate6COLOR.menu.FlashMode.dout=DOUT
+Inkplate6COLOR.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate6COLOR.menu.FlashMode.dout.build.boot=dout
+
+Inkplate6COLOR.menu.FlashFreq.80=80MHz
+Inkplate6COLOR.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate6COLOR.menu.FlashFreq.40=40MHz
+Inkplate6COLOR.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate6COLOR.menu.UploadSpeed.921600=921600
+Inkplate6COLOR.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6COLOR.menu.UploadSpeed.115200=115200
+Inkplate6COLOR.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate6COLOR.menu.UploadSpeed.256000.windows=256000
+Inkplate6COLOR.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate6COLOR.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate6COLOR.menu.UploadSpeed.230400=230400
+Inkplate6COLOR.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate6COLOR.menu.UploadSpeed.460800.linux=460800
+Inkplate6COLOR.menu.UploadSpeed.460800.macosx=460800
+Inkplate6COLOR.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate6COLOR.menu.UploadSpeed.512000.windows=512000
+Inkplate6COLOR.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate6COLOR.menu.DebugLevel.none=None
+Inkplate6COLOR.menu.DebugLevel.none.build.code_debug=0
+Inkplate6COLOR.menu.DebugLevel.error=Error
+Inkplate6COLOR.menu.DebugLevel.error.build.code_debug=1
+Inkplate6COLOR.menu.DebugLevel.warn=Warn
+Inkplate6COLOR.menu.DebugLevel.warn.build.code_debug=2
+Inkplate6COLOR.menu.DebugLevel.info=Info
+Inkplate6COLOR.menu.DebugLevel.info.build.code_debug=3
+Inkplate6COLOR.menu.DebugLevel.debug=Debug
+Inkplate6COLOR.menu.DebugLevel.debug.build.code_debug=4
+Inkplate6COLOR.menu.DebugLevel.verbose=Verbose
+Inkplate6COLOR.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate6COLOR.menu.EraseFlash.none=Disabled
+Inkplate6COLOR.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate6COLOR.menu.EraseFlash.all=Enabled
+Inkplate6COLOR.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+Inkplate10V2.name=Soldered Inkplate10
+
+Inkplate10V2.bootloader.tool=esptool_py
+Inkplate10V2.bootloader.tool.default=esptool_py
+
+Inkplate10V2.upload.tool=esptool_py
+Inkplate10V2.upload.tool.default=esptool_py
+Inkplate10V2.upload.tool.network=esp_ota
+
+Inkplate10V2.upload.maximum_size=1310720
+Inkplate10V2.upload.maximum_data_size=327680
+Inkplate10V2.upload.flags=
+Inkplate10V2.upload.extra_flags=
+
+Inkplate10V2.serial.disableDTR=true
+Inkplate10V2.serial.disableRTS=true
+
+Inkplate10V2.build.tarch=xtensa
+Inkplate10V2.build.bootloader_addr=0x1000
+Inkplate10V2.build.target=esp32
+Inkplate10V2.build.mcu=esp32
+Inkplate10V2.build.core=esp32
+Inkplate10V2.build.variant=Inkplate
+Inkplate10V2.build.board=INKPLATE10V2
+
+Inkplate10V2.build.f_cpu=240000000L
+Inkplate10V2.build.flash_size=4MB
+Inkplate10V2.build.flash_freq=80m
+Inkplate10V2.build.flash_mode=qio
+Inkplate10V2.build.boot=dio
+Inkplate10V2.build.partitions=default
+Inkplate10V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate10V2.build.extra_libs=
+
+Inkplate10V2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+Inkplate10V2.menu.PartitionScheme.huge_app.build.partitions=huge_app
+Inkplate10V2.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+Inkplate10V2.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+Inkplate10V2.menu.PartitionScheme.default.build.partitions=default
+Inkplate10V2.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+Inkplate10V2.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+Inkplate10V2.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+Inkplate10V2.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+Inkplate10V2.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+Inkplate10V2.menu.PartitionScheme.minimal.build.partitions=minimal
+Inkplate10V2.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+Inkplate10V2.menu.PartitionScheme.no_ota.build.partitions=no_ota
+Inkplate10V2.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+Inkplate10V2.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+Inkplate10V2.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+Inkplate10V2.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+Inkplate10V2.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+Inkplate10V2.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+Inkplate10V2.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+Inkplate10V2.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+Inkplate10V2.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+Inkplate10V2.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+Inkplate10V2.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+Inkplate10V2.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+Inkplate10V2.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+Inkplate10V2.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+Inkplate10V2.menu.PartitionScheme.fatflash.build.partitions=ffat
+
+Inkplate10V2.menu.FlashMode.qio=QIO
+Inkplate10V2.menu.FlashMode.qio.build.flash_mode=dio
+Inkplate10V2.menu.FlashMode.qio.build.boot=qio
+Inkplate10V2.menu.FlashMode.dio=DIO
+Inkplate10V2.menu.FlashMode.dio.build.flash_mode=dio
+Inkplate10V2.menu.FlashMode.dio.build.boot=dio
+Inkplate10V2.menu.FlashMode.qout=QOUT
+Inkplate10V2.menu.FlashMode.qout.build.flash_mode=dout
+Inkplate10V2.menu.FlashMode.qout.build.boot=qout
+Inkplate10V2.menu.FlashMode.dout=DOUT
+Inkplate10V2.menu.FlashMode.dout.build.flash_mode=dout
+Inkplate10V2.menu.FlashMode.dout.build.boot=dout
+
+Inkplate10V2.menu.FlashFreq.80=80MHz
+Inkplate10V2.menu.FlashFreq.80.build.flash_freq=80m
+Inkplate10V2.menu.FlashFreq.40=40MHz
+Inkplate10V2.menu.FlashFreq.40.build.flash_freq=40m
+
+Inkplate10V2.menu.UploadSpeed.921600=921600
+Inkplate10V2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate10V2.menu.UploadSpeed.115200=115200
+Inkplate10V2.menu.UploadSpeed.115200.upload.speed=115200
+Inkplate10V2.menu.UploadSpeed.256000.windows=256000
+Inkplate10V2.menu.UploadSpeed.256000.upload.speed=256000
+Inkplate10V2.menu.UploadSpeed.230400.windows.upload.speed=256000
+Inkplate10V2.menu.UploadSpeed.230400=230400
+Inkplate10V2.menu.UploadSpeed.230400.upload.speed=230400
+Inkplate10V2.menu.UploadSpeed.460800.linux=460800
+Inkplate10V2.menu.UploadSpeed.460800.macosx=460800
+Inkplate10V2.menu.UploadSpeed.460800.upload.speed=460800
+Inkplate10V2.menu.UploadSpeed.512000.windows=512000
+Inkplate10V2.menu.UploadSpeed.512000.upload.speed=512000
+
+Inkplate10V2.menu.DebugLevel.none=None
+Inkplate10V2.menu.DebugLevel.none.build.code_debug=0
+Inkplate10V2.menu.DebugLevel.error=Error
+Inkplate10V2.menu.DebugLevel.error.build.code_debug=1
+Inkplate10V2.menu.DebugLevel.warn=Warn
+Inkplate10V2.menu.DebugLevel.warn.build.code_debug=2
+Inkplate10V2.menu.DebugLevel.info=Info
+Inkplate10V2.menu.DebugLevel.info.build.code_debug=3
+Inkplate10V2.menu.DebugLevel.debug=Debug
+Inkplate10V2.menu.DebugLevel.debug.build.code_debug=4
+Inkplate10V2.menu.DebugLevel.verbose=Verbose
+Inkplate10V2.menu.DebugLevel.verbose.build.code_debug=5
+
+Inkplate10V2.menu.EraseFlash.none=Disabled
+Inkplate10V2.menu.EraseFlash.none.upload.erase_cmd=
+Inkplate10V2.menu.EraseFlash.all=Enabled
+Inkplate10V2.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
