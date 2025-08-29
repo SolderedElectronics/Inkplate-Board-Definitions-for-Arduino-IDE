@@ -1,11 +1,11 @@
 {
     "packages": [
         {
-            "name": "Inkplate_Boards",
+            "name": "Inkplate Boards V2",
             "maintainer": "Soldered: Arduino compatibles made in Europe",
-            "websiteURL": "https://soldered.com/en",
+            "websiteURL": "https://soldered.com",
             "help": {
-                "online": "http://www.forum.soldered.com/en"
+                "online": "http://www.forum.soldered.com"
             },
             "platforms": [
                 {
