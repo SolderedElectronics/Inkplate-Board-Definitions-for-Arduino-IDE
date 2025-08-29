@@ -2,7 +2,7 @@
     "packages": [
         {
             "name": "Inkplate Boards V2",
-            "maintainer": "Soldered: Arduino compatibles made in Europe",
+            "maintainer": "This is a test of the package",
             "websiteURL": "https://soldered.com",
             "help": {
                 "online": "http://www.forum.soldered.com"
