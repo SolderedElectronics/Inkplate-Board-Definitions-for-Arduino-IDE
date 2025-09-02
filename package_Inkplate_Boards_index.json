@@ -1,49 +1,49 @@
 {
     "packages": [
         {
-            "name": "soldered-inkplate",
+            "name": "soldered-inkplate-boards",
             "maintainer": "This is a test of the package",
             "websiteURL": "https://soldered.com",
             "help": {
-                "online": "http://www.forum.soldered.com"
+                "online": "https://soldered.com/documentation/"
             },
             "platforms": [
                 {
                     "help": {
-                        "online": "http://www.forum.soldered.com"
+                        "online": "https://soldered.com/documentation/"
                     },
                     "category": "Inkplate",
                     "url": "https://github.com/SolderedElectronics/Inkplate-Board-Definitions-for-Arduino-IDE/raw/refs/heads/main/Inkplate_core-2.0.0.zip",
                     "archiveFileName": "Inkplate_core-2.0.0.zip",
-                    "checksum": "SHA-256:2f1b3e7fb638ca86ee9c92617f694c1d8759222690ffcd32939579f097ef49d5",
+                    "checksum": "SHA-256:325513f71e3769f2f48f82a55601ab193706bd5b4ceb57b7d41cf67659065345",
                     "size": "27694556",
                     "version": "2.0.0",
-                    "name": "Inkplate V2",
+                    "name": "Soldered Inkplate Boards",
                     "architecture": "esp32",
                     "boards":[
                         {
                             "name":"Soldered Inkplate 2"
                         },
                         {
-                            "name":"Soldered Inkplate 4 TEMPERA"
+                            "name":"Soldered Inkplate 4TEMPERA"
                         },
                         {
                             "name":"Soldered Inkplate 5"
                         },
                         {
-                            "name":"Soldered Inkplate 5 V2"
+                            "name":"Soldered Inkplate 5V2"
                         },
                         {
                             "name":"Soldered Inkplate 6"
                         },
                         {
-                            "name":"Soldered Inkplate 6Plus"
+                            "name":"Soldered Inkplate 6PLUS"
                         },
                         {
-                            "name":"Soldered Inkplate 6 FLICK"
+                            "name":"Soldered Inkplate 6FLICK"
                         },
                         {
-                            "name":"Soldered Inkplate 6Color"
+                            "name":"Soldered Inkplate 6COLOR"
                         },
                         {
                             "name":"Soldered Inkplate 10"
@@ -51,47 +51,47 @@
                    ],
                    "toolsDependencies":[
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "esp32-arduino-libs",
                         "version": "idf-release_v5.5-b66b5448-v1"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "xtensa-esp-elf-gcc",
                         "version": "esp-14.2.0_20241119"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "xtensa-esp-elf-gdb",
                         "version": "16.2_20250324"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "riscv32-esp-elf-gcc",
                         "version": "esp-14.2.0_20241119"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "riscv32-esp-elf-gdb",
                         "version": "16.2_20250324"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "openocd-esp32",
                         "version": "v0.12.0-esp32-20250422"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "esptool_py",
                         "version": "5.0.2"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "mkspiffs",
                         "version": "0.2.3"
                         },
                         {
-                        "packager": "soldered-inkplate",
+                        "packager": "soldered-inkplate-boards",
                         "name": "mklittlefs",
                         "version": "3.0.0-gnu12-dc7f933"
                         },

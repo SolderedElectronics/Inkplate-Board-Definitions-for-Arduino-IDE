@@ -30,7 +30,7 @@ menu.einksize=E-Ink Display Size
 
 ##############################################################
 
-Inkplate2.name=Soldered Inkplate2
+Inkplate2.name=Soldered Inkplate 2
 
 Inkplate2.bootloader.tool=esptool_py
 Inkplate2.bootloader.tool.default=esptool_py
@@ -61,6 +61,7 @@ Inkplate2.build.flash_freq=80m
 Inkplate2.build.flash_mode=qio
 Inkplate2.build.boot=dio
 Inkplate2.build.custom_partitions=default
+Inkplate2.build.partitions=default
 Inkplate2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate2.build.extra_libs=
 
@@ -146,7 +147,7 @@ Inkplate2.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
-Inkplate4TEMPERA.name=Soldered Inkplate 4 TEMPERA
+Inkplate4TEMPERA.name=Soldered Inkplate 4TEMPERA
 
 Inkplate4TEMPERA.bootloader.tool=esptool_py
 Inkplate4TEMPERA.bootloader.tool.default=esptool_py
@@ -177,6 +178,7 @@ Inkplate4TEMPERA.build.flash_freq=80m
 Inkplate4TEMPERA.build.flash_mode=qio
 Inkplate4TEMPERA.build.boot=dio
 Inkplate4TEMPERA.build.custom_partitions=default
+Inkplate4TEMPERA.build.partitions=default
 Inkplate4TEMPERA.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate4TEMPERA.build.extra_libs=
 
@@ -262,7 +264,7 @@ Inkplate4TEMPERA.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
-Inkplate5.name=Soldered Inkplate5
+Inkplate5.name=Soldered Inkplate 5
 
 Inkplate5.bootloader.tool=esptool_py
 Inkplate5.bootloader.tool.default=esptool_py
@@ -292,6 +294,7 @@ Inkplate5.build.flash_size=4MB
 Inkplate5.build.flash_freq=80m
 Inkplate5.build.flash_mode=qio
 Inkplate5.build.boot=dio
+Inkplate5.build.partitions=default
 Inkplate5.build.custom_partitions=default
 Inkplate5.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5.build.extra_libs=
@@ -378,7 +381,7 @@ Inkplate5.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
-Inkplate5V2.name=Soldered Inkplate 5 V2
+Inkplate5V2.name=Soldered Inkplate 5V2
 
 Inkplate5V2.bootloader.tool=esptool_py
 Inkplate5V2.bootloader.tool.default=esptool_py
@@ -408,6 +411,7 @@ Inkplate5V2.build.flash_size=4MB
 Inkplate5V2.build.flash_freq=80m
 Inkplate5V2.build.flash_mode=qio
 Inkplate5V2.build.boot=dio
+Inkplate5V2.build.partitions=default
 Inkplate5V2.build.custom_partitions=default
 Inkplate5V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5V2.build.extra_libs=
@@ -494,7 +498,7 @@ Inkplate5V2.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
-Inkplate6V2.name=Soldered Inkplate6
+Inkplate6V2.name=Soldered Inkplate 6
 
 Inkplate6V2.bootloader.tool=esptool_py
 Inkplate6V2.bootloader.tool.default=esptool_py
@@ -524,6 +528,7 @@ Inkplate6V2.build.flash_size=4MB
 Inkplate6V2.build.flash_freq=80m
 Inkplate6V2.build.flash_mode=qio
 Inkplate6V2.build.boot=dio
+Inkplate6V2.build.partitions=default
 Inkplate6V2.build.custom_partitions=default
 Inkplate6V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6V2.build.extra_libs=
@@ -610,7 +615,7 @@ Inkplate6V2.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
-Inkplate6plusV2.name=Soldered Inkplate 6Plus
+Inkplate6plusV2.name=Soldered Inkplate 6PLUS
 
 Inkplate6plusV2.bootloader.tool=esptool_py
 Inkplate6plusV2.bootloader.tool.default=esptool_py
@@ -640,6 +645,7 @@ Inkplate6plusV2.build.flash_size=4MB
 Inkplate6plusV2.build.flash_freq=80m
 Inkplate6plusV2.build.flash_mode=qio
 Inkplate6plusV2.build.boot=dio
+Inkplate6plusV2.build.partitions=default
 Inkplate6plusV2.build.custom_partitions=default
 Inkplate6plusV2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6plusV2.build.extra_libs=
@@ -726,7 +732,7 @@ Inkplate6plusV2.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
-Inkplate6Flick.name=Soldered Inkplate 6 FLICK
+Inkplate6Flick.name=Soldered Inkplate 6FLICK
 
 Inkplate6Flick.bootloader.tool=esptool_py
 Inkplate6Flick.bootloader.tool.default=esptool_py
@@ -756,6 +762,7 @@ Inkplate6Flick.build.flash_size=4MB
 Inkplate6Flick.build.flash_freq=80m
 Inkplate6Flick.build.flash_mode=qio
 Inkplate6Flick.build.boot=dio
+Inkplate6Flick.build.partitions=default
 Inkplate6Flick.build.custom_partitions=default
 Inkplate6Flick.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6Flick.build.extra_libs=
@@ -872,6 +879,7 @@ Inkplate6COLOR.build.flash_size=4MB
 Inkplate6COLOR.build.flash_freq=80m
 Inkplate6COLOR.build.flash_mode=qio
 Inkplate6COLOR.build.boot=dio
+Inkplate6COLOR.build.partitions=default
 Inkplate6COLOR.build.custom_partitions=default
 Inkplate6COLOR.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6COLOR.build.extra_libs=
@@ -958,7 +966,7 @@ Inkplate6COLOR.menu.EraseFlash.all.upload.erase_cmd=-e
 
 ##############################################################
 
-Inkplate10V2.name=Soldered Inkplate10
+Inkplate10V2.name=Soldered Inkplate 10
 
 Inkplate10V2.bootloader.tool=esptool_py
 Inkplate10V2.bootloader.tool.default=esptool_py
@@ -988,6 +996,7 @@ Inkplate10V2.build.flash_size=4MB
 Inkplate10V2.build.flash_freq=80m
 Inkplate10V2.build.flash_mode=qio
 Inkplate10V2.build.boot=dio
+Inkplate10V2.build.partitions=default
 Inkplate10V2.build.custom_partitions=default
 Inkplate10V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate10V2.build.extra_libs=
