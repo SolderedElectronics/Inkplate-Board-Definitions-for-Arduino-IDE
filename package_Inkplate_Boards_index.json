@@ -2,7 +2,7 @@
     "packages": [
         {
             "name": "soldered-inkplate-boards",
-            "maintainer": "This is a test of the package",
+            "maintainer": "Soldered Electronics",
             "websiteURL": "https://soldered.com",
             "help": {
                 "online": "https://soldered.com/documentation/"
