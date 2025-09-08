@@ -1,6 +1,7 @@
 name=Inkplate boards
 version=2.0.0
 
+
 tools.esp32-arduino-libs.path={runtime.tools.esp32-arduino-libs.path}
 
 tools.xtensa-esp-elf-gcc.path={runtime.tools.esp-x32.path}
@@ -21,7 +22,7 @@ tools.esp_ota.cmd.windows="{runtime.platform.path}\tools\espota.exe" -r
 tools.gen_esp32part.cmd=python3 "{runtime.platform.path}/tools/gen_esp32part.py"
 tools.gen_esp32part.cmd.windows="{runtime.platform.path}\tools\gen_esp32part.exe"
 
-tools.gen_insights_pkg.cmd=python3 "{runtime.platform.path}/tools/gen_insights_package.py"
+tools.gen_insights_pkg.cmd=python3 "{runtime.platform.path}"/tools/gen_insights_package.py
 tools.gen_insights_pkg.cmd.windows="{runtime.platform.path}\tools\gen_insights_package.exe"
 
 compiler.path={tools.{build.tarch}-esp-elf-gcc.path}/bin/
@@ -355,3 +356,4 @@ tools.esptool_py_app_only.upload.params.quiet=
 tools.esptool_py_app_only.upload.pattern_args=--chip {build.mcu} --port "{serial.port}" --baud {upload.speed} {upload.flags} --before default_reset --after hard_reset write_flash --flash_mode {build.flash_mode} --flash_freq {build.flash_freq} --flash_size {build.flash_size} {build.flash_offset} "{build.path}/{build.project_name}.bin" {upload.extra_flags}
 
 tools.esptool_py_app_only.upload.pattern="{path}/{cmd}" {tools.esptool_py_app_only.upload.pattern_args}
+
