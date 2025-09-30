@@ -39,7 +39,7 @@ Inkplate2.upload.tool=esptool_py
 Inkplate2.upload.tool.default=esptool_py
 Inkplate2.upload.tool.network=esp_ota
 
-Inkplate2.upload.maximum_size=1310720
+Inkplate2.upload.maximum_size=3145728
 Inkplate2.upload.maximum_data_size=327680
 Inkplate2.upload.flags=
 Inkplate2.upload.extra_flags=
@@ -59,9 +59,9 @@ Inkplate2.build.f_cpu=240000000L
 Inkplate2.build.flash_size=4MB
 Inkplate2.build.flash_freq=80m
 Inkplate2.build.flash_mode=qio
-Inkplate2.build.boot=dio
-Inkplate2.build.custom_partitions=default
-Inkplate2.build.partitions=default
+Inkplate2.build.boot=qio
+Inkplate2.build.custom_partitions=huge_app
+Inkplate2.build.partitions=huge_app
 Inkplate2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate2.build.extra_libs=
 
@@ -156,7 +156,7 @@ Inkplate4TEMPERA.upload.tool=esptool_py
 Inkplate4TEMPERA.upload.tool.default=esptool_py
 Inkplate4TEMPERA.upload.tool.network=esp_ota
 
-Inkplate4TEMPERA.upload.maximum_size=1310720
+Inkplate4TEMPERA.upload.maximum_size=3145728
 Inkplate4TEMPERA.upload.maximum_data_size=327680
 Inkplate4TEMPERA.upload.flags=
 Inkplate4TEMPERA.upload.extra_flags=
@@ -176,9 +176,9 @@ Inkplate4TEMPERA.build.f_cpu=240000000L
 Inkplate4TEMPERA.build.flash_size=4MB
 Inkplate4TEMPERA.build.flash_freq=80m
 Inkplate4TEMPERA.build.flash_mode=qio
-Inkplate4TEMPERA.build.boot=dio
-Inkplate4TEMPERA.build.custom_partitions=default
-Inkplate4TEMPERA.build.partitions=default
+Inkplate4TEMPERA.build.boot=qio
+Inkplate4TEMPERA.build.custom_partitions=huge_app
+Inkplate4TEMPERA.build.partitions=huge_app
 Inkplate4TEMPERA.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate4TEMPERA.build.extra_libs=
 
@@ -273,7 +273,7 @@ Inkplate5.upload.tool=esptool_py
 Inkplate5.upload.tool.default=esptool_py
 Inkplate5.upload.tool.network=esp_ota
 
-Inkplate5.upload.maximum_size=1310720
+Inkplate5.upload.maximum_size=3145728
 Inkplate5.upload.maximum_data_size=327680
 Inkplate5.upload.flags=
 Inkplate5.upload.extra_flags=
@@ -293,9 +293,9 @@ Inkplate5.build.f_cpu=240000000L
 Inkplate5.build.flash_size=4MB
 Inkplate5.build.flash_freq=80m
 Inkplate5.build.flash_mode=qio
-Inkplate5.build.boot=dio
-Inkplate5.build.partitions=default
-Inkplate5.build.custom_partitions=default
+Inkplate5.build.boot=qio
+Inkplate5.build.partitions=huge_app
+Inkplate5.build.custom_partitions=huge_app
 Inkplate5.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5.build.extra_libs=
 
@@ -390,7 +390,7 @@ Inkplate5V2.upload.tool=esptool_py
 Inkplate5V2.upload.tool.default=esptool_py
 Inkplate5V2.upload.tool.network=esp_ota
 
-Inkplate5V2.upload.maximum_size=1310720
+Inkplate5V2.upload.maximum_size=3145728
 Inkplate5V2.upload.maximum_data_size=327680
 Inkplate5V2.upload.flags=
 Inkplate5V2.upload.extra_flags=
@@ -410,9 +410,9 @@ Inkplate5V2.build.f_cpu=240000000L
 Inkplate5V2.build.flash_size=4MB
 Inkplate5V2.build.flash_freq=80m
 Inkplate5V2.build.flash_mode=qio
-Inkplate5V2.build.boot=dio
-Inkplate5V2.build.partitions=default
-Inkplate5V2.build.custom_partitions=default
+Inkplate5V2.build.boot=qio
+Inkplate5V2.build.partitions=huge_app
+Inkplate5V2.build.custom_partitions=huge_app
 Inkplate5V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5V2.build.extra_libs=
 
@@ -507,7 +507,7 @@ Inkplate6V2.upload.tool=esptool_py
 Inkplate6V2.upload.tool.default=esptool_py
 Inkplate6V2.upload.tool.network=esp_ota
 
-Inkplate6V2.upload.maximum_size=1310720
+Inkplate6V2.upload.maximum_size=3145728
 Inkplate6V2.upload.maximum_data_size=327680
 Inkplate6V2.upload.flags=
 Inkplate6V2.upload.extra_flags=
@@ -527,9 +527,9 @@ Inkplate6V2.build.f_cpu=240000000L
 Inkplate6V2.build.flash_size=4MB
 Inkplate6V2.build.flash_freq=80m
 Inkplate6V2.build.flash_mode=qio
-Inkplate6V2.build.boot=dio
-Inkplate6V2.build.partitions=default
-Inkplate6V2.build.custom_partitions=default
+Inkplate6V2.build.boot=qio
+Inkplate6V2.build.partitions=huge_app
+Inkplate6V2.build.custom_partitions=huge_app
 Inkplate6V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6V2.build.extra_libs=
 
@@ -624,7 +624,7 @@ Inkplate6plusV2.upload.tool=esptool_py
 Inkplate6plusV2.upload.tool.default=esptool_py
 Inkplate6plusV2.upload.tool.network=esp_ota
 
-Inkplate6plusV2.upload.maximum_size=1310720
+Inkplate6plusV2.upload.maximum_size=3145728
 Inkplate6plusV2.upload.maximum_data_size=327680
 Inkplate6plusV2.upload.flags=
 Inkplate6plusV2.upload.extra_flags=
@@ -644,9 +644,9 @@ Inkplate6plusV2.build.f_cpu=240000000L
 Inkplate6plusV2.build.flash_size=4MB
 Inkplate6plusV2.build.flash_freq=80m
 Inkplate6plusV2.build.flash_mode=qio
-Inkplate6plusV2.build.boot=dio
-Inkplate6plusV2.build.partitions=default
-Inkplate6plusV2.build.custom_partitions=default
+Inkplate6plusV2.build.boot=qio
+Inkplate6plusV2.build.partitions=huge_app
+Inkplate6plusV2.build.custom_partitions=huge_app
 Inkplate6plusV2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6plusV2.build.extra_libs=
 
@@ -741,7 +741,7 @@ Inkplate6Flick.upload.tool=esptool_py
 Inkplate6Flick.upload.tool.default=esptool_py
 Inkplate6Flick.upload.tool.network=esp_ota
 
-Inkplate6Flick.upload.maximum_size=1310720
+Inkplate6Flick.upload.maximum_size=3145728
 Inkplate6Flick.upload.maximum_data_size=327680
 Inkplate6Flick.upload.flags=
 Inkplate6Flick.upload.extra_flags=
@@ -762,8 +762,8 @@ Inkplate6Flick.build.flash_size=4MB
 Inkplate6Flick.build.flash_freq=80m
 Inkplate6Flick.build.flash_mode=qio
 Inkplate6Flick.build.boot=dio
-Inkplate6Flick.build.partitions=default
-Inkplate6Flick.build.custom_partitions=default
+Inkplate6Flick.build.partitions=huge_app
+Inkplate6Flick.build.custom_partitions=huge_app
 Inkplate6Flick.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6Flick.build.extra_libs=
 
@@ -858,7 +858,7 @@ Inkplate6COLOR.upload.tool=esptool_py
 Inkplate6COLOR.upload.tool.default=esptool_py
 Inkplate6COLOR.upload.tool.network=esp_ota
 
-Inkplate6COLOR.upload.maximum_size=1310720
+Inkplate6COLOR.upload.maximum_size=3145728
 Inkplate6COLOR.upload.maximum_data_size=327680
 Inkplate6COLOR.upload.flags=
 Inkplate6COLOR.upload.extra_flags=
@@ -878,9 +878,9 @@ Inkplate6COLOR.build.f_cpu=240000000L
 Inkplate6COLOR.build.flash_size=4MB
 Inkplate6COLOR.build.flash_freq=80m
 Inkplate6COLOR.build.flash_mode=qio
-Inkplate6COLOR.build.boot=dio
-Inkplate6COLOR.build.partitions=default
-Inkplate6COLOR.build.custom_partitions=default
+Inkplate6COLOR.build.boot=qio
+Inkplate6COLOR.build.partitions=huge_app
+Inkplate6COLOR.build.custom_partitions=huge_app
 Inkplate6COLOR.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6COLOR.build.extra_libs=
 
@@ -975,7 +975,9 @@ Inkplate10V2.upload.tool=esptool_py
 Inkplate10V2.upload.tool.default=esptool_py
 Inkplate10V2.upload.tool.network=esp_ota
 
-Inkplate10V2.upload.maximum_size=1310720
+Inkplate10V2.build.partitions=huge_app
+Inkplate10V2.build.custom_partitions=huge_app
+Inkplate10V2.upload.maximum_size=3145728
 Inkplate10V2.upload.maximum_data_size=327680
 Inkplate10V2.upload.flags=
 Inkplate10V2.upload.extra_flags=
@@ -995,9 +997,7 @@ Inkplate10V2.build.f_cpu=240000000L
 Inkplate10V2.build.flash_size=4MB
 Inkplate10V2.build.flash_freq=80m
 Inkplate10V2.build.flash_mode=qio
-Inkplate10V2.build.boot=dio
-Inkplate10V2.build.partitions=default
-Inkplate10V2.build.custom_partitions=default
+Inkplate10V2.build.boot=qio
 Inkplate10V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate10V2.build.extra_libs=
 
