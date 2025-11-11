@@ -16,7 +16,7 @@
                     "url": "https://github.com/SolderedElectronics/Inkplate-Board-Definitions-for-Arduino-IDE/raw/refs/heads/main/Inkplate_core-2.0.0.zip",
                     "archiveFileName": "Inkplate_core-2.0.0.zip",
                     "checksum": "SHA-256:4b8b6691eb6e416e6cabfd95f9b71a8ad9c007aed8d31e887d861faa957d6ad1",
-                    "size": "27694556",
+                    "size": "28447422",
                     "version": "2.0.0",
                     "name": "Soldered Inkplate Boards",
                     "architecture": "esp32",
