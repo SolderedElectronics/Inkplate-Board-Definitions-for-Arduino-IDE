@@ -3,9 +3,9 @@ version=3.0.0
 
 tools.esp32-arduino-libs.path={runtime.tools.esp32-arduino-libs.path}
 tools.esp32-arduino-libs.path.windows={runtime.tools.esp32-arduino-libs.path}
-tools.xtensa-esp-elf-gcc.path={runtime.tools.xtensa-esp-elf-gcc.path}
+tools.xtensa-esp-elf-gcc.path={runtime.tools.esp-x32.path}
 tools.xtensa-esp-elf-gdb.path={runtime.tools.xtensa-esp-elf-gdb.path}
-tools.riscv32-esp-elf-gcc.path={runtime.tools.riscv32-esp-elf-gcc.path}
+tools.riscv32-esp-elf-gcc.path={runtime.tools.esp-rv32.path}
 tools.riscv32-esp-elf-gdb.path={runtime.tools.riscv32-esp-elf-gdb.path}
 
 tools.esptool_py.path={runtime.tools.esptool_py.path}
