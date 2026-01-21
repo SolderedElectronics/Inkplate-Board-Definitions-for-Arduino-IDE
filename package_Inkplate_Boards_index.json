@@ -63,47 +63,47 @@
                 ],
                 "toolsDependencies": [
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "esp32-arduino-libs",
                         "version": "idf-release_v5.5-9bb7aa84-v2"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "esp-x32",
                         "version": "2511"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "xtensa-esp-elf-gdb",
                         "version": "16.3_20250913"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "esp-rv32",
                         "version": "2511"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "riscv32-esp-elf-gdb",
                         "version": "16.3_20250913"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "openocd-esp32",
                         "version": "v0.12.0-esp32-20250707"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "esptool_py",
                         "version": "5.1.0"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "mkspiffs",
                         "version": "0.2.3"
                       },
                       {
-                        "packager": "esp32",
+                        "packager": "soldered-inkplate-boards",
                         "name": "mklittlefs",
                         "version": "4.0.2-db0513a"
                       },
