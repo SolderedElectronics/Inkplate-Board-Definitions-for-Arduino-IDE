@@ -13,7 +13,7 @@
                       "online": "https://soldered.com/documentation/"
                   },
                   "category": "Inkplate",
-                  "url": "https://github.com/SolderedElectronics/Inkplate-Board-Definitions-for-Arduino-IDE/raw/refs/heads/dev/Inkplate_core-3.0.0.zip",
+                  "url": "https://github.com/SolderedElectronics/Inkplate-Board-Definitions-for-Arduino-IDE/raw/refs/heads/main/Inkplate_core-3.0.0.zip",
                   "archiveFileName": "Inkplate_core-3.0.0.zip",
                   "checksum": "SHA-256:1272bc6b7b628f127aa5251a397650206367fa6072d606fbdef4b639a1e6c8f9",
                   "size": "38216961",
