@@ -283,40 +283,73 @@ Inkplate2.build.f_cpu=240000000L
 Inkplate2.build.flash_size=4MB
 Inkplate2.build.flash_freq=80m
 Inkplate2.build.flash_mode=qio
-Inkplate2.build.boot=qio
-Inkplate2.build.custom_partitions=huge_app
-Inkplate2.build.partitions=huge_app
+Inkplate2.build.boot=dio
+Inkplate2.build.partitions=default
 Inkplate2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate2.build.extra_libs=
+Inkplate2.build.memory_type=qio_qspi
+
+Inkplate2.menu.FlashSize.4M=4MB (32Mb)
+Inkplate2.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate2.menu.FlashSize.2M=2MB (16Mb)
+Inkplate2.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate2.menu.PSRAM.enabled=Enabled
+Inkplate2.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate2.menu.PSRAM.disabled=Disabled
+Inkplate2.menu.PSRAM.disabled.build.defines=
+
+Inkplate2.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate2.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate2.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate2.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate2.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate2.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate2.menu.CPUFreq.40=40MHz
+Inkplate2.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate2.menu.CPUFreq.20=20MHz
+Inkplate2.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate2.menu.CPUFreq.10=10MHz
+Inkplate2.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate2.menu.LoopCore.1=Core 1
+Inkplate2.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate2.menu.LoopCore.0=Core 0
+Inkplate2.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate2.menu.EventsCore.1=Core 1
+Inkplate2.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate2.menu.EventsCore.0=Core 0
+Inkplate2.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate2.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
 Inkplate2.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
 Inkplate2.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
-Inkplate2.menu.PartitionScheme.default.build.custom_partitions=default
+Inkplate2.menu.PartitionScheme.default.build.partitions=default
 Inkplate2.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
-Inkplate2.menu.PartitionScheme.defaultffat.build.custom_partitions=default_ffat
+Inkplate2.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
 Inkplate2.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
-Inkplate2.menu.PartitionScheme.default_8MB.build.custom_partitions=default_8MB
+Inkplate2.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
 Inkplate2.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
 Inkplate2.menu.PartitionScheme.minimal.build.custom_partitions=minimal
 Inkplate2.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
-Inkplate2.menu.PartitionScheme.no_ota.build.custom_partitions=no_ota
+Inkplate2.menu.PartitionScheme.no_ota.build.partitions=no_ota
 Inkplate2.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
 Inkplate2.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
-Inkplate2.menu.PartitionScheme.noota_3g.build.custom_partitions=noota_3g
+Inkplate2.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
 Inkplate2.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
 Inkplate2.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
 Inkplate2.menu.PartitionScheme.noota_ffat.build.custom_partitions=noota_ffat
 Inkplate2.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
 Inkplate2.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
-Inkplate2.menu.PartitionScheme.noota_3gffat.build.custom_partitions=noota_3gffat
+Inkplate2.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
 Inkplate2.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
 Inkplate2.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
 Inkplate2.menu.PartitionScheme.min_spiffs.build.custom_partitions=min_spiffs
 Inkplate2.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
 Inkplate2.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
-Inkplate2.menu.PartitionScheme.fatflash.build.custom_partitions=ffat
+Inkplate2.menu.PartitionScheme.fatflash.build.partitions=ffat
 
 Inkplate2.menu.FlashMode.qio=QIO
 Inkplate2.menu.FlashMode.qio.build.flash_mode=dio
@@ -336,11 +369,10 @@ Inkplate2.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate2.menu.FlashFreq.40=40MHz
 Inkplate2.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate2.menu.UploadSpeed.460800.linux=460800
-Inkplate2.menu.UploadSpeed.460800.macosx=460800
-Inkplate2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate2.menu.UploadSpeed.921600=921600
 Inkplate2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate2.menu.UploadSpeed.460800=460800
+Inkplate2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate2.menu.UploadSpeed.115200=115200
 Inkplate2.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate2.menu.UploadSpeed.256000.windows=256000
@@ -400,11 +432,44 @@ Inkplate4TEMPERA.build.f_cpu=240000000L
 Inkplate4TEMPERA.build.flash_size=4MB
 Inkplate4TEMPERA.build.flash_freq=80m
 Inkplate4TEMPERA.build.flash_mode=qio
-Inkplate4TEMPERA.build.boot=qio
-Inkplate4TEMPERA.build.custom_partitions=huge_app
-Inkplate4TEMPERA.build.partitions=huge_app
+Inkplate4TEMPERA.build.boot=dio
+Inkplate4TEMPERA.build.partitions=default
 Inkplate4TEMPERA.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate4TEMPERA.build.extra_libs=
+Inkplate4TEMPERA.build.memory_type=qio_qspi
+
+Inkplate4TEMPERA.menu.FlashSize.4M=4MB (32Mb)
+Inkplate4TEMPERA.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate4TEMPERA.menu.FlashSize.2M=2MB (16Mb)
+Inkplate4TEMPERA.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate4TEMPERA.menu.PSRAM.enabled=Enabled
+Inkplate4TEMPERA.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate4TEMPERA.menu.PSRAM.disabled=Disabled
+Inkplate4TEMPERA.menu.PSRAM.disabled.build.defines=
+
+Inkplate4TEMPERA.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate4TEMPERA.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate4TEMPERA.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate4TEMPERA.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate4TEMPERA.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate4TEMPERA.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate4TEMPERA.menu.CPUFreq.40=40MHz
+Inkplate4TEMPERA.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate4TEMPERA.menu.CPUFreq.20=20MHz
+Inkplate4TEMPERA.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate4TEMPERA.menu.CPUFreq.10=10MHz
+Inkplate4TEMPERA.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate4TEMPERA.menu.LoopCore.1=Core 1
+Inkplate4TEMPERA.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate4TEMPERA.menu.LoopCore.0=Core 0
+Inkplate4TEMPERA.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate4TEMPERA.menu.EventsCore.1=Core 1
+Inkplate4TEMPERA.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate4TEMPERA.menu.EventsCore.0=Core 0
+Inkplate4TEMPERA.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate4TEMPERA.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate4TEMPERA.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -453,11 +518,10 @@ Inkplate4TEMPERA.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate4TEMPERA.menu.FlashFreq.40=40MHz
 Inkplate4TEMPERA.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate4TEMPERA.menu.UploadSpeed.460800.linux=460800
-Inkplate4TEMPERA.menu.UploadSpeed.460800.macosx=460800
-Inkplate4TEMPERA.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate4TEMPERA.menu.UploadSpeed.921600=921600
 Inkplate4TEMPERA.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate4TEMPERA.menu.UploadSpeed.460800=460800
+Inkplate4TEMPERA.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate4TEMPERA.menu.UploadSpeed.115200=115200
 Inkplate4TEMPERA.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate4TEMPERA.menu.UploadSpeed.256000.windows=256000
@@ -517,11 +581,44 @@ Inkplate5.build.f_cpu=240000000L
 Inkplate5.build.flash_size=4MB
 Inkplate5.build.flash_freq=80m
 Inkplate5.build.flash_mode=qio
-Inkplate5.build.boot=qio
-Inkplate5.build.partitions=huge_app
-Inkplate5.build.custom_partitions=huge_app
+Inkplate5.build.boot=dio
+Inkplate5.build.partitions=default
 Inkplate5.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5.build.extra_libs=
+Inkplate5.build.memory_type=qio_qspi
+
+Inkplate5.menu.FlashSize.4M=4MB (32Mb)
+Inkplate5.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate5.menu.FlashSize.2M=2MB (16Mb)
+Inkplate5.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate5.menu.PSRAM.enabled=Enabled
+Inkplate5.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate5.menu.PSRAM.disabled=Disabled
+Inkplate5.menu.PSRAM.disabled.build.defines=
+
+Inkplate5.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate5.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate5.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate5.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate5.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate5.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate5.menu.CPUFreq.40=40MHz
+Inkplate5.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate5.menu.CPUFreq.20=20MHz
+Inkplate5.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate5.menu.CPUFreq.10=10MHz
+Inkplate5.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate5.menu.LoopCore.1=Core 1
+Inkplate5.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate5.menu.LoopCore.0=Core 0
+Inkplate5.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate5.menu.EventsCore.1=Core 1
+Inkplate5.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate5.menu.EventsCore.0=Core 0
+Inkplate5.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate5.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate5.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -570,11 +667,10 @@ Inkplate5.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate5.menu.FlashFreq.40=40MHz
 Inkplate5.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate5.menu.UploadSpeed.460800.linux=460800
-Inkplate5.menu.UploadSpeed.460800.macosx=460800
-Inkplate5.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate5.menu.UploadSpeed.921600=921600
 Inkplate5.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate5.menu.UploadSpeed.460800=460800
+Inkplate5.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate5.menu.UploadSpeed.115200=115200
 Inkplate5.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate5.menu.UploadSpeed.256000.windows=256000
@@ -634,11 +730,44 @@ Inkplate5V2.build.f_cpu=240000000L
 Inkplate5V2.build.flash_size=4MB
 Inkplate5V2.build.flash_freq=80m
 Inkplate5V2.build.flash_mode=qio
-Inkplate5V2.build.boot=qio
-Inkplate5V2.build.partitions=huge_app
-Inkplate5V2.build.custom_partitions=huge_app
+Inkplate5V2.build.boot=dio
+Inkplate5V2.build.partitions=default
 Inkplate5V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5V2.build.extra_libs=
+Inkplate5V2.build.memory_type=qio_qspi
+
+Inkplate5V2.menu.FlashSize.4M=4MB (32Mb)
+Inkplate5V2.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate5V2.menu.FlashSize.2M=2MB (16Mb)
+Inkplate5V2.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate5V2.menu.PSRAM.enabled=Enabled
+Inkplate5V2.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate5V2.menu.PSRAM.disabled=Disabled
+Inkplate5V2.menu.PSRAM.disabled.build.defines=
+
+Inkplate5V2.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate5V2.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate5V2.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate5V2.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate5V2.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate5V2.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate5V2.menu.CPUFreq.40=40MHz
+Inkplate5V2.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate5V2.menu.CPUFreq.20=20MHz
+Inkplate5V2.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate5V2.menu.CPUFreq.10=10MHz
+Inkplate5V2.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate5V2.menu.LoopCore.1=Core 1
+Inkplate5V2.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate5V2.menu.LoopCore.0=Core 0
+Inkplate5V2.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate5V2.menu.EventsCore.1=Core 1
+Inkplate5V2.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate5V2.menu.EventsCore.0=Core 0
+Inkplate5V2.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate5V2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate5V2.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -687,11 +816,10 @@ Inkplate5V2.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate5V2.menu.FlashFreq.40=40MHz
 Inkplate5V2.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate5V2.menu.UploadSpeed.460800.linux=460800
-Inkplate5V2.menu.UploadSpeed.460800.macosx=460800
-Inkplate5V2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate5V2.menu.UploadSpeed.921600=921600
 Inkplate5V2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate5V2.menu.UploadSpeed.460800=460800
+Inkplate5V2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate5V2.menu.UploadSpeed.115200=115200
 Inkplate5V2.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate5V2.menu.UploadSpeed.256000.windows=256000
@@ -751,11 +879,44 @@ Inkplate6V2.build.f_cpu=240000000L
 Inkplate6V2.build.flash_size=4MB
 Inkplate6V2.build.flash_freq=80m
 Inkplate6V2.build.flash_mode=qio
-Inkplate6V2.build.boot=qio
-Inkplate6V2.build.partitions=huge_app
-Inkplate6V2.build.custom_partitions=huge_app
+Inkplate6V2.build.boot=dio
+Inkplate6V2.build.partitions=default
 Inkplate6V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6V2.build.extra_libs=
+Inkplate6V2.build.memory_type=qio_qspi
+
+Inkplate6V2.menu.FlashSize.4M=4MB (32Mb)
+Inkplate6V2.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate6V2.menu.FlashSize.2M=2MB (16Mb)
+Inkplate6V2.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate6V2.menu.PSRAM.enabled=Enabled
+Inkplate6V2.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6V2.menu.PSRAM.disabled=Disabled
+Inkplate6V2.menu.PSRAM.disabled.build.defines=
+
+Inkplate6V2.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate6V2.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate6V2.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate6V2.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate6V2.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate6V2.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate6V2.menu.CPUFreq.40=40MHz
+Inkplate6V2.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate6V2.menu.CPUFreq.20=20MHz
+Inkplate6V2.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate6V2.menu.CPUFreq.10=10MHz
+Inkplate6V2.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate6V2.menu.LoopCore.1=Core 1
+Inkplate6V2.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate6V2.menu.LoopCore.0=Core 0
+Inkplate6V2.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate6V2.menu.EventsCore.1=Core 1
+Inkplate6V2.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate6V2.menu.EventsCore.0=Core 0
+Inkplate6V2.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate6V2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate6V2.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -804,11 +965,10 @@ Inkplate6V2.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate6V2.menu.FlashFreq.40=40MHz
 Inkplate6V2.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate6V2.menu.UploadSpeed.460800.linux=460800
-Inkplate6V2.menu.UploadSpeed.460800.macosx=460800
-Inkplate6V2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6V2.menu.UploadSpeed.921600=921600
 Inkplate6V2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6V2.menu.UploadSpeed.460800=460800
+Inkplate6V2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6V2.menu.UploadSpeed.115200=115200
 Inkplate6V2.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate6V2.menu.UploadSpeed.256000.windows=256000
@@ -873,6 +1033,40 @@ Inkplate6.build.partitions=huge_app
 Inkplate6.build.custom_partitions=huge_app
 Inkplate6.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6.build.extra_libs=
+Inkplate6.build.memory_type=qio_qspi
+
+Inkplate6.menu.FlashSize.4M=4MB (32Mb)
+Inkplate6.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate6.menu.FlashSize.2M=2MB (16Mb)
+Inkplate6.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate6.menu.PSRAM.enabled=Enabled
+Inkplate6.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6.menu.PSRAM.disabled=Disabled
+Inkplate6.menu.PSRAM.disabled.build.defines=
+
+Inkplate6.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate6.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate6.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate6.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate6.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate6.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate6.menu.CPUFreq.40=40MHz
+Inkplate6.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate6.menu.CPUFreq.20=20MHz
+Inkplate6.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate6.menu.CPUFreq.10=10MHz
+Inkplate6.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate6.menu.LoopCore.1=Core 1
+Inkplate6.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate6.menu.LoopCore.0=Core 0
+Inkplate6.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate6.menu.EventsCore.1=Core 1
+Inkplate6.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate6.menu.EventsCore.0=Core 0
+Inkplate6.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate6.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate6.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -921,11 +1115,10 @@ Inkplate6.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate6.menu.FlashFreq.40=40MHz
 Inkplate6.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate6.menu.UploadSpeed.460800.linux=460800
-Inkplate6.menu.UploadSpeed.460800.macosx=460800
-Inkplate6.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6.menu.UploadSpeed.921600=921600
 Inkplate6.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6.menu.UploadSpeed.460800=460800
+Inkplate6.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6.menu.UploadSpeed.115200=115200
 Inkplate6.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate6.menu.UploadSpeed.256000.windows=256000
@@ -985,11 +1178,44 @@ Inkplate6plusV2.build.f_cpu=240000000L
 Inkplate6plusV2.build.flash_size=4MB
 Inkplate6plusV2.build.flash_freq=80m
 Inkplate6plusV2.build.flash_mode=qio
-Inkplate6plusV2.build.boot=qio
-Inkplate6plusV2.build.partitions=huge_app
-Inkplate6plusV2.build.custom_partitions=huge_app
+Inkplate6plusV2.build.boot=dio
+Inkplate6plusV2.build.partitions=default
 Inkplate6plusV2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6plusV2.build.extra_libs=
+Inkplate6plusV2.build.memory_type=qio_qspi
+
+Inkplate6plusV2.menu.FlashSize.4M=4MB (32Mb)
+Inkplate6plusV2.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate6plusV2.menu.FlashSize.2M=2MB (16Mb)
+Inkplate6plusV2.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate6plusV2.menu.PSRAM.enabled=Enabled
+Inkplate6plusV2.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6plusV2.menu.PSRAM.disabled=Disabled
+Inkplate6plusV2.menu.PSRAM.disabled.build.defines=
+
+Inkplate6plusV2.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate6plusV2.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate6plusV2.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate6plusV2.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate6plusV2.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate6plusV2.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate6plusV2.menu.CPUFreq.40=40MHz
+Inkplate6plusV2.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate6plusV2.menu.CPUFreq.20=20MHz
+Inkplate6plusV2.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate6plusV2.menu.CPUFreq.10=10MHz
+Inkplate6plusV2.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate6plusV2.menu.LoopCore.1=Core 1
+Inkplate6plusV2.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate6plusV2.menu.LoopCore.0=Core 0
+Inkplate6plusV2.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate6plusV2.menu.EventsCore.1=Core 1
+Inkplate6plusV2.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate6plusV2.menu.EventsCore.0=Core 0
+Inkplate6plusV2.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate6plusV2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate6plusV2.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -1038,11 +1264,10 @@ Inkplate6plusV2.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate6plusV2.menu.FlashFreq.40=40MHz
 Inkplate6plusV2.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate6plusV2.menu.UploadSpeed.460800.linux=460800
-Inkplate6plusV2.menu.UploadSpeed.460800.macosx=460800
-Inkplate6plusV2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6plusV2.menu.UploadSpeed.921600=921600
 Inkplate6plusV2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6plusV2.menu.UploadSpeed.460800=460800
+Inkplate6plusV2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6plusV2.menu.UploadSpeed.115200=115200
 Inkplate6plusV2.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate6plusV2.menu.UploadSpeed.256000.windows=256000
@@ -1107,6 +1332,40 @@ Inkplate6plus.build.partitions=huge_app
 Inkplate6plus.build.custom_partitions=huge_app
 Inkplate6plus.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6plus.build.extra_libs=
+Inkplate6plus.build.memory_type=qio_qspi
+
+Inkplate6plus.menu.FlashSize.4M=4MB (32Mb)
+Inkplate6plus.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate6plus.menu.FlashSize.2M=2MB (16Mb)
+Inkplate6plus.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate6plus.menu.PSRAM.enabled=Enabled
+Inkplate6plus.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6plus.menu.PSRAM.disabled=Disabled
+Inkplate6plus.menu.PSRAM.disabled.build.defines=
+
+Inkplate6plus.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate6plus.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate6plus.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate6plus.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate6plus.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate6plus.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate6plus.menu.CPUFreq.40=40MHz
+Inkplate6plus.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate6plus.menu.CPUFreq.20=20MHz
+Inkplate6plus.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate6plus.menu.CPUFreq.10=10MHz
+Inkplate6plus.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate6plus.menu.LoopCore.1=Core 1
+Inkplate6plus.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate6plus.menu.LoopCore.0=Core 0
+Inkplate6plus.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate6plus.menu.EventsCore.1=Core 1
+Inkplate6plus.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate6plus.menu.EventsCore.0=Core 0
+Inkplate6plus.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate6plus.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate6plus.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -1155,11 +1414,10 @@ Inkplate6plus.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate6plus.menu.FlashFreq.40=40MHz
 Inkplate6plus.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate6plus.menu.UploadSpeed.460800.linux=460800
-Inkplate6plus.menu.UploadSpeed.460800.macosx=460800
-Inkplate6plus.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6plus.menu.UploadSpeed.921600=921600
 Inkplate6plus.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6plus.menu.UploadSpeed.460800=460800
+Inkplate6plus.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6plus.menu.UploadSpeed.115200=115200
 Inkplate6plus.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate6plus.menu.UploadSpeed.256000.windows=256000
@@ -1220,10 +1478,43 @@ Inkplate6Flick.build.flash_size=4MB
 Inkplate6Flick.build.flash_freq=80m
 Inkplate6Flick.build.flash_mode=qio
 Inkplate6Flick.build.boot=dio
-Inkplate6Flick.build.partitions=huge_app
-Inkplate6Flick.build.custom_partitions=huge_app
+Inkplate6Flick.build.partitions=default
 Inkplate6Flick.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6Flick.build.extra_libs=
+Inkplate6Flick.build.memory_type=qio_qspi
+
+Inkplate6Flick.menu.FlashSize.4M=4MB (32Mb)
+Inkplate6Flick.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate6Flick.menu.FlashSize.2M=2MB (16Mb)
+Inkplate6Flick.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate6Flick.menu.PSRAM.enabled=Enabled
+Inkplate6Flick.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6Flick.menu.PSRAM.disabled=Disabled
+Inkplate6Flick.menu.PSRAM.disabled.build.defines=
+
+Inkplate6Flick.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate6Flick.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate6Flick.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate6Flick.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate6Flick.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate6Flick.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate6Flick.menu.CPUFreq.40=40MHz
+Inkplate6Flick.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate6Flick.menu.CPUFreq.20=20MHz
+Inkplate6Flick.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate6Flick.menu.CPUFreq.10=10MHz
+Inkplate6Flick.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate6Flick.menu.LoopCore.1=Core 1
+Inkplate6Flick.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate6Flick.menu.LoopCore.0=Core 0
+Inkplate6Flick.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate6Flick.menu.EventsCore.1=Core 1
+Inkplate6Flick.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate6Flick.menu.EventsCore.0=Core 0
+Inkplate6Flick.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate6Flick.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate6Flick.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -1272,11 +1563,10 @@ Inkplate6Flick.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate6Flick.menu.FlashFreq.40=40MHz
 Inkplate6Flick.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate6Flick.menu.UploadSpeed.460800.linux=460800
-Inkplate6Flick.menu.UploadSpeed.460800.macosx=460800
-Inkplate6Flick.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6Flick.menu.UploadSpeed.921600=921600
 Inkplate6Flick.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6Flick.menu.UploadSpeed.460800=460800
+Inkplate6Flick.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6Flick.menu.UploadSpeed.115200=115200
 Inkplate6Flick.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate6Flick.menu.UploadSpeed.256000.windows=256000
@@ -1336,11 +1626,44 @@ Inkplate6COLOR.build.f_cpu=240000000L
 Inkplate6COLOR.build.flash_size=4MB
 Inkplate6COLOR.build.flash_freq=80m
 Inkplate6COLOR.build.flash_mode=qio
-Inkplate6COLOR.build.boot=qio
-Inkplate6COLOR.build.partitions=huge_app
-Inkplate6COLOR.build.custom_partitions=huge_app
+Inkplate6COLOR.build.boot=dio
+Inkplate6COLOR.build.partitions=default
 Inkplate6COLOR.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6COLOR.build.extra_libs=
+Inkplate6COLOR.build.memory_type=qio_qspi
+
+Inkplate6COLOR.menu.FlashSize.4M=4MB (32Mb)
+Inkplate6COLOR.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate6COLOR.menu.FlashSize.2M=2MB (16Mb)
+Inkplate6COLOR.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate6COLOR.menu.PSRAM.enabled=Enabled
+Inkplate6COLOR.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate6COLOR.menu.PSRAM.disabled=Disabled
+Inkplate6COLOR.menu.PSRAM.disabled.build.defines=
+
+Inkplate6COLOR.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate6COLOR.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate6COLOR.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate6COLOR.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate6COLOR.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate6COLOR.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate6COLOR.menu.CPUFreq.40=40MHz
+Inkplate6COLOR.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate6COLOR.menu.CPUFreq.20=20MHz
+Inkplate6COLOR.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate6COLOR.menu.CPUFreq.10=10MHz
+Inkplate6COLOR.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate6COLOR.menu.LoopCore.1=Core 1
+Inkplate6COLOR.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate6COLOR.menu.LoopCore.0=Core 0
+Inkplate6COLOR.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate6COLOR.menu.EventsCore.1=Core 1
+Inkplate6COLOR.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate6COLOR.menu.EventsCore.0=Core 0
+Inkplate6COLOR.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate6COLOR.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate6COLOR.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -1389,11 +1712,10 @@ Inkplate6COLOR.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate6COLOR.menu.FlashFreq.40=40MHz
 Inkplate6COLOR.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate6COLOR.menu.UploadSpeed.460800.linux=460800
-Inkplate6COLOR.menu.UploadSpeed.460800.macosx=460800
-Inkplate6COLOR.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6COLOR.menu.UploadSpeed.921600=921600
 Inkplate6COLOR.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate6COLOR.menu.UploadSpeed.460800=460800
+Inkplate6COLOR.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate6COLOR.menu.UploadSpeed.115200=115200
 Inkplate6COLOR.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate6COLOR.menu.UploadSpeed.256000.windows=256000
@@ -1433,8 +1755,7 @@ Inkplate10V2.upload.tool=esptool_py
 Inkplate10V2.upload.tool.default=esptool_py
 Inkplate10V2.upload.tool.network=esp_ota
 
-Inkplate10V2.build.partitions=huge_app
-Inkplate10V2.build.custom_partitions=huge_app
+Inkplate10V2.build.partitions=default
 Inkplate10V2.upload.maximum_size=3145728
 Inkplate10V2.upload.maximum_data_size=327680
 Inkplate10V2.upload.flags=
@@ -1458,6 +1779,40 @@ Inkplate10V2.build.flash_mode=qio
 Inkplate10V2.build.boot=qio
 Inkplate10V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate10V2.build.extra_libs=
+Inkplate10V2.build.memory_type=qio_qspi
+
+Inkplate10V2.menu.FlashSize.4M=4MB (32Mb)
+Inkplate10V2.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate10V2.menu.FlashSize.2M=2MB (16Mb)
+Inkplate10V2.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate10V2.menu.PSRAM.enabled=Enabled
+Inkplate10V2.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate10V2.menu.PSRAM.disabled=Disabled
+Inkplate10V2.menu.PSRAM.disabled.build.defines=
+
+Inkplate10V2.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate10V2.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate10V2.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate10V2.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate10V2.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate10V2.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate10V2.menu.CPUFreq.40=40MHz
+Inkplate10V2.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate10V2.menu.CPUFreq.20=20MHz
+Inkplate10V2.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate10V2.menu.CPUFreq.10=10MHz
+Inkplate10V2.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate10V2.menu.LoopCore.1=Core 1
+Inkplate10V2.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate10V2.menu.LoopCore.0=Core 0
+Inkplate10V2.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate10V2.menu.EventsCore.1=Core 1
+Inkplate10V2.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate10V2.menu.EventsCore.0=Core 0
+Inkplate10V2.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate10V2.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate10V2.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -1506,11 +1861,10 @@ Inkplate10V2.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate10V2.menu.FlashFreq.40=40MHz
 Inkplate10V2.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate10V2.menu.UploadSpeed.460800.linux=460800
-Inkplate10V2.menu.UploadSpeed.460800.macosx=460800
-Inkplate10V2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate10V2.menu.UploadSpeed.921600=921600
 Inkplate10V2.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate10V2.menu.UploadSpeed.460800=460800
+Inkplate10V2.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate10V2.menu.UploadSpeed.115200=115200
 Inkplate10V2.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate10V2.menu.UploadSpeed.256000.windows=256000
@@ -1550,8 +1904,7 @@ Inkplate10.upload.tool=esptool_py
 Inkplate10.upload.tool.default=esptool_py
 Inkplate10.upload.tool.network=esp_ota
 
-Inkplate10.build.partitions=huge_app
-Inkplate10.build.custom_partitions=huge_app
+Inkplate10.build.partitions=default
 Inkplate10.upload.maximum_size=3145728
 Inkplate10.upload.maximum_data_size=327680
 Inkplate10.upload.flags=
@@ -1572,9 +1925,43 @@ Inkplate10.build.f_cpu=240000000L
 Inkplate10.build.flash_size=4MB
 Inkplate10.build.flash_freq=80m
 Inkplate10.build.flash_mode=qio
-Inkplate10.build.boot=qio
+Inkplate10.build.boot=dio
 Inkplate10.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate10.build.extra_libs=
+Inkplate10.build.memory_type=qio_qspi
+
+Inkplate10.menu.FlashSize.4M=4MB (32Mb)
+Inkplate10.menu.FlashSize.4M.build.flash_size=4MB
+Inkplate10.menu.FlashSize.2M=2MB (16Mb)
+Inkplate10.menu.FlashSize.2M.build.flash_size=2MB
+
+Inkplate10.menu.PSRAM.enabled=Enabled
+Inkplate10.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
+Inkplate10.menu.PSRAM.disabled=Disabled
+Inkplate10.menu.PSRAM.disabled.build.defines=
+
+Inkplate10.menu.CPUFreq.240=240MHz (WiFi)
+Inkplate10.menu.CPUFreq.240.build.f_cpu=240000000L
+Inkplate10.menu.CPUFreq.160=160MHz (WiFi)
+Inkplate10.menu.CPUFreq.160.build.f_cpu=160000000L
+Inkplate10.menu.CPUFreq.80=80MHz (WiFi)
+Inkplate10.menu.CPUFreq.80.build.f_cpu=80000000L
+Inkplate10.menu.CPUFreq.40=40MHz
+Inkplate10.menu.CPUFreq.40.build.f_cpu=40000000L
+Inkplate10.menu.CPUFreq.20=20MHz
+Inkplate10.menu.CPUFreq.20.build.f_cpu=20000000L
+Inkplate10.menu.CPUFreq.10=10MHz
+Inkplate10.menu.CPUFreq.10.build.f_cpu=10000000L
+
+Inkplate10.menu.LoopCore.1=Core 1
+Inkplate10.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+Inkplate10.menu.LoopCore.0=Core 0
+Inkplate10.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+Inkplate10.menu.EventsCore.1=Core 1
+Inkplate10.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+Inkplate10.menu.EventsCore.0=Core 0
+Inkplate10.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
 Inkplate10.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
 Inkplate10.menu.PartitionScheme.huge_app.build.custom_partitions=huge_app
@@ -1623,11 +2010,10 @@ Inkplate10.menu.FlashFreq.80.build.flash_freq=80m
 Inkplate10.menu.FlashFreq.40=40MHz
 Inkplate10.menu.FlashFreq.40.build.flash_freq=40m
 
-Inkplate10.menu.UploadSpeed.460800.linux=460800
-Inkplate10.menu.UploadSpeed.460800.macosx=460800
-Inkplate10.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate10.menu.UploadSpeed.921600=921600
 Inkplate10.menu.UploadSpeed.921600.upload.speed=921600
+Inkplate10.menu.UploadSpeed.460800=460800
+Inkplate10.menu.UploadSpeed.460800.upload.speed=460800
 Inkplate10.menu.UploadSpeed.115200=115200
 Inkplate10.menu.UploadSpeed.115200.upload.speed=115200
 Inkplate10.menu.UploadSpeed.256000.windows=256000
