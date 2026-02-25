@@ -284,7 +284,8 @@ Inkplate2.build.flash_size=4MB
 Inkplate2.build.flash_freq=80m
 Inkplate2.build.flash_mode=qio
 Inkplate2.build.boot=dio
-Inkplate2.build.partitions=default
+Inkplate2.build.partitions=huge_app
+Inkplate2.build.custom_partitions=huge_app
 Inkplate2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate2.build.extra_libs=
 Inkplate2.build.memory_type=qio_qspi
@@ -433,7 +434,8 @@ Inkplate4TEMPERA.build.flash_size=4MB
 Inkplate4TEMPERA.build.flash_freq=80m
 Inkplate4TEMPERA.build.flash_mode=qio
 Inkplate4TEMPERA.build.boot=dio
-Inkplate4TEMPERA.build.partitions=default
+Inkplate4TEMPERA.build.partitions=huge_app
+Inkplate4TEMPERA.build.custom_partitions=huge_app
 Inkplate4TEMPERA.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate4TEMPERA.build.extra_libs=
 Inkplate4TEMPERA.build.memory_type=qio_qspi
@@ -582,7 +584,8 @@ Inkplate5.build.flash_size=4MB
 Inkplate5.build.flash_freq=80m
 Inkplate5.build.flash_mode=qio
 Inkplate5.build.boot=dio
-Inkplate5.build.partitions=default
+Inkplate5.build.partitions=huge_app
+Inkplate5.build.custom_partitions=huge_app
 Inkplate5.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5.build.extra_libs=
 Inkplate5.build.memory_type=qio_qspi
@@ -731,7 +734,8 @@ Inkplate5V2.build.flash_size=4MB
 Inkplate5V2.build.flash_freq=80m
 Inkplate5V2.build.flash_mode=qio
 Inkplate5V2.build.boot=dio
-Inkplate5V2.build.partitions=default
+Inkplate5V2.build.partitions=huge_app
+Inkplate5V2.build.custom_partitions=huge_app
 Inkplate5V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate5V2.build.extra_libs=
 Inkplate5V2.build.memory_type=qio_qspi
@@ -880,7 +884,8 @@ Inkplate6V2.build.flash_size=4MB
 Inkplate6V2.build.flash_freq=80m
 Inkplate6V2.build.flash_mode=qio
 Inkplate6V2.build.boot=dio
-Inkplate6V2.build.partitions=default
+Inkplate6V2.build.partitions=huge_app
+Inkplate6V2.build.custom_partitions=huge_app
 Inkplate6V2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6V2.build.extra_libs=
 Inkplate6V2.build.memory_type=qio_qspi
@@ -1179,7 +1184,8 @@ Inkplate6plusV2.build.flash_size=4MB
 Inkplate6plusV2.build.flash_freq=80m
 Inkplate6plusV2.build.flash_mode=qio
 Inkplate6plusV2.build.boot=dio
-Inkplate6plusV2.build.partitions=default
+Inkplate6plusV2.build.partitions=huge_app
+Inkplate6plusV2.build.custom_partitions=huge_app
 Inkplate6plusV2.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6plusV2.build.extra_libs=
 Inkplate6plusV2.build.memory_type=qio_qspi
@@ -1478,7 +1484,8 @@ Inkplate6Flick.build.flash_size=4MB
 Inkplate6Flick.build.flash_freq=80m
 Inkplate6Flick.build.flash_mode=qio
 Inkplate6Flick.build.boot=dio
-Inkplate6Flick.build.partitions=default
+Inkplate6Flick.build.partitions=huge_app
+Inkplate6Flick.build.custom_partitions=huge_app
 Inkplate6Flick.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6Flick.build.extra_libs=
 Inkplate6Flick.build.memory_type=qio_qspi
@@ -1627,7 +1634,8 @@ Inkplate6COLOR.build.flash_size=4MB
 Inkplate6COLOR.build.flash_freq=80m
 Inkplate6COLOR.build.flash_mode=qio
 Inkplate6COLOR.build.boot=dio
-Inkplate6COLOR.build.partitions=default
+Inkplate6COLOR.build.partitions=huge_app
+Inkplate6COLOR.build.custom_partitions=huge_app
 Inkplate6COLOR.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-strategy=memw
 Inkplate6COLOR.build.extra_libs=
 Inkplate6COLOR.build.memory_type=qio_qspi
@@ -1755,7 +1763,8 @@ Inkplate10V2.upload.tool=esptool_py
 Inkplate10V2.upload.tool.default=esptool_py
 Inkplate10V2.upload.tool.network=esp_ota
 
-Inkplate10V2.build.partitions=default
+Inkplate10V2.build.partitions=huge_app
+Inkplate10V2.build.custom_partitions=huge_app
 Inkplate10V2.upload.maximum_size=3145728
 Inkplate10V2.upload.maximum_data_size=327680
 Inkplate10V2.upload.flags=
@@ -1904,7 +1913,8 @@ Inkplate10.upload.tool=esptool_py
 Inkplate10.upload.tool.default=esptool_py
 Inkplate10.upload.tool.network=esp_ota
 
-Inkplate10.build.partitions=default
+Inkplate10.build.partitions=huge_app
+Inkplate10.build.custom_partitions=huge_app
 Inkplate10.upload.maximum_size=3145728
 Inkplate10.upload.maximum_data_size=327680
 Inkplate10.upload.flags=
