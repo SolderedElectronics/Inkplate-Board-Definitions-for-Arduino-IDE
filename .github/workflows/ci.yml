@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+  workflow_dispatch:
+
+jobs:
+  validate-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate package index
+        run: python3 .github/scripts/validate_index.py package_Inkplate_Boards_index.json
+
+  compile:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - core: soldered-inkplate-boards:esp32
+            fqbn: soldered-inkplate-boards:esp32:Inkplate6V2
+            library: InkplateLibrary
+            sketch: InkplateLibrary/examples/Inkplate6/Basic/Inkplate6_Hello_World
+          - core: Inkplate_Motion:stm32
+            fqbn: Inkplate_Motion:stm32:Inkplate6Motion
+            library: Inkplate Motion Library
+            sketch: Inkplate_Motion_Library/examples/Inkplate6Motion/Basic/Inkplate_6_Motion_Simple_BW
+    name: compile (${{ matrix.core }})
+    env:
+      # Install from this branch's index, not the published one on main.
+      ARDUINO_BOARD_MANAGER_ADDITIONAL_URLS: file://${{ github.workspace }}/package_Inkplate_Boards_index.json
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/setup-arduino-cli@v2
+      - name: Cache downloaded cores and tools
+        uses: actions/cache@v4
+        with:
+          path: ~/.arduino15/staging
+          key: arduino-staging-${{ matrix.core }}-${{ hashFiles('package_Inkplate_Boards_index.json') }}
+      - name: Install core and library
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install "${{ matrix.core }}"
+          arduino-cli lib install "${{ matrix.library }}"
+      - name: Compile example
+        run: arduino-cli compile --fqbn "${{ matrix.fqbn }}" "$HOME/Arduino/libraries/${{ matrix.sketch }}"
