@@ -2350,6 +2350,61 @@
                         "online": "http://www.forum.soldered.com"
                     },
                     "category": "Inkplate MOTION",
+                    "url": "https://github.com/SolderedElectronics/Inkplate-Board-Definitions-for-Arduino-IDE/releases/download/motion-2.0.1/Inkplate_Motion_core-2.0.1.zip",
+                    "archiveFileName": "Inkplate_Motion_core-2.0.1.zip",
+                    "checksum": "SHA-256:5f31fe83f4c618c38ee4b04ff826947acb4573f600b01626ecbec9dd7e5ec742",
+                    "size": "9915456",
+                    "version": "2.0.1",
+                    "name": "Inkplate MOTION Boards",
+                    "architecture": "stm32",
+                    "boards": [
+                        {
+                            "name": "Soldered Inkplate 6MOTION"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "Inkplate_Motion",
+                            "name": "xpack-arm-none-eabi-gcc",
+                            "version": "14.2.1-1.1"
+                        },
+                        {
+                            "packager": "Inkplate_Motion",
+                            "name": "xpack-openocd",
+                            "version": "0.12.0-6"
+                        },
+                        {
+                            "packager": "Inkplate_Motion",
+                            "name": "STM32Tools",
+                            "version": "2.5.0"
+                        },
+                        {
+                            "packager": "Inkplate_Motion",
+                            "name": "CMSIS",
+                            "version": "6.3.0"
+                        },
+                        {
+                            "packager": "Inkplate_Motion",
+                            "name": "CMSIS_DSP",
+                            "version": "1.17.0"
+                        },
+                        {
+                            "packager": "Inkplate_Motion",
+                            "name": "CMSIS_NN",
+                            "version": "7.0.0"
+                        },
+                        {
+                            "packager": "Inkplate_Motion",
+                            "name": "STM32_SVD",
+                            "version": "1.22.0"
+                        }
+                    ]
+                },
+                {
+                    "help": {
+                        "online": "http://www.forum.soldered.com"
+                    },
+                    "category": "Inkplate MOTION",
                     "url": "https://github.com/SolderedElectronics/Inkplate-Board-Definitions-for-Arduino-IDE/releases/download/motion-2.0.0/Inkplate_Motion_core-2.0.0.zip",
                     "archiveFileName": "Inkplate_Motion_core-2.0.0.zip",
                     "checksum": "SHA-256:7c43343c5747ae9092e7925f6447f6ad43ae2eb8c2b5287b2338b7f2a354003f",
